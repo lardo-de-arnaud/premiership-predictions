@@ -37,7 +37,7 @@
     $(document).ready(function() {
         if (!PROXY_URL || PROXY_URL.indexOf("<your-proxy-host>") !== -1) {
             console.error("PROXY_URL not set. Please set PROXY_URL to your proxy endpoint that forwards the request to RapidAPI.");
-            $("#current-table").append("<p style='display:inline-block; border:2px solid red; padding:10px; background-color:#ffecec; color:#900; border-radius:4px;'><b>Error:</b> PROXY_URL not configured. Contact admin.</p>");
+            $("#current-table").append("<p style='display:inline-block; border:2px solid red; padding:10px; background-color:#ffecec; color:#900; border-radius:4px;'><b>Error:</b> PROXY_URL not configured. Tell Adam to get his finger out and fix it!</p>");
             return;
         }
 
