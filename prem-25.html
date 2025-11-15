@@ -1,0 +1,220 @@
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+<title>Predict-o-footy-o-matic : Premiership Predictions 2025/26</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet"
+        href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+<script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+<link rel="icon"
+      type="image/jpg"
+      href="cat-in-a-fez-small.jpg ">
+
+<style>
+
+.sr-only {
+
+  position: absolute;
+  top: -900000px;
+}
+body {
+        font-family: arial;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+#send {
+        background-color: lightgrey;
+}
+
+#Name {
+        border: 2px solid red;
+        height: 2.5em;
+}
+
+select {
+        margin-left: 20px;
+        width: 80%;
+        font-size: 1em;
+        font-size: 1em;
+        border: 2px solid grey;
+        border-radius: 0;
+        font-weight: 400;
+        color: inherit;
+        padding: 11px 15px;
+        line-height: normal;
+        transition: border-color 0.2s ease, outline 0.2s ease;
+}
+
+#newsortable {
+        margin: 20px;
+        padding: 3;
+        width: 80%;
+        border: 20px;
+}
+
+#newsortable li {
+        cursor: grab;
+  box-shadow: 1px 2px #888888;
+        border: 2px solid grey;
+        margin: 3px 3px 3px 3px;
+        padding: 10px 10px 10px 10px;
+        margin: 20px 20px 20px 20px;
+}
+
+#newsortable li span {
+        position: absolute;
+        margin-left: -1.3em;
+}
+
+</style>
+<script>
+                        $(function() {
+                                $("#newsortable").sortable();
+                                $("#newsortable").disableSelection();
+                        });
+                        function hashCode(str) {
+                                var hash = 0;
+                                if (str.length == 0)
+                                        return hash;
+                                for ( i = 0; i < str.length; i++) {
+                                        char = str.charCodeAt(i);
+                                        hash = ((hash << 5) - hash) + char;
+                                        hash = hash & hash;
+                                        // Convert to 32bit integer
+                                }
+                                return hash;
+                        }
+                </script>
+</head>
+<body>
+        <!--body onLoad="blinker();"-->
+
+
+
+
+<img src="https://talksport.com/wp-content/uploads/sites/5/2025/05/manchester-uniteds-portuguese-head-coach-993872197.jpg" width="270">
+<h1>Premiership Predictions 2025-26 </h1>
+
+
+        <p>Closing date for this year will be the day before the first game
+                after the international break (whenever that is).
+        <p>
+                <a href="prem_24-25_entries.html">Last year's winners</a> were Sunil Nair and Robert James with a score of 50. The previous  year's best total was 
+32 but then again Man U & Spurs (who provided a great deal of entertainment by being demonstrably
+useless) threw everything out of whack last year.
+        <p>
+                So, order the teams below into the <a href="prem-25-entries.html">predicted
+                        finishing positions</a> and press 'Submit' remembering of course to add
+                your name first - plese use something approaching your real name. The differences between your prediction and finishing
+                positions are added up, the lowest score wins. You dont really need to
+                know much about football, many past winners wouldnt know the inside of a football
+from the outside.
+
+        </p>
+
+        <p>The winner is allowed to strut about the place with a confident
+                swagger and has full bragging rights over the known universe for the
+                next year.</p>
+
+        <p>
+                <a href="prem-25-entries.html">Current entries</a>
+        </p>
+        <!--
+                See: http://stackoverflow.com/questions/10737294/jquery-drag-and-drop-list-reordering
+                http://www.wiseguysonly.com/2008/12/07/drag-and-drop-reordering-of-database-fields-sortables-with-jquery/
+                -->
+
+        <form action="https://users.ox.ac.uk/cgi-bin/FormMail.pl" method="post">
+
+                <input type="hidden" name="recipient"
+                        value="adam.marshall@it.ox.ac.uk" /> <input type="hidden"
+                        name="email" value="adam.marshall@it.ox.ac.uk" />
+
+                <script>
+                                function enable() {
+                                        $('#send').removeAttr('disabled');
+                                };
+
+                        </script>
+
+                Your name: <input id='Name' size='20' onKeyUp="enable()" type='text'
+                        name='Name' /> <br />
+                <h3>Prediced finishing positions</h3>
+
+<p>Drag the list below into the order in which you think the teams will finish.
+
+                <div id="<h3>Finishing Positions</h3>">
+                        <ol class="ui-sortable" id="newsortable">
+                                <li id="Arsenal" class="ui-state-default">Arsenal</li>
+                                <li id="Aston Villa" class="ui-state-default">Aston Villa</li>
+                                <li id="AFC Bournemouth" class="ui-state-default">Bournemouth</li>
+                                <li id="Brentford" class="ui-state-default">Brentford</li>
+                                <li id="Brighton &amp; Hove Albion" class="ui-state-default">Brighton &amp; Hove Albion</li>
+                                <li id="Burnley" class="ui-state-default">Burnley </li>
+                                <li id="Chelsea" class="ui-state-default">Chelsea</li>
+                                <li id="Crystal Palace" class="ui-state-default">Crystal Palace </li>
+                                <li id="Everton" class="ui-state-default">Everton</li>
+                                <li id="Fulham" class="ui-state-default">Fulham</li>
+                                <li id="Leeds United" class="ui-state-default">Leeds United</li>
+                                <li id="Liverpool" class="ui-state-default">Liverpool</li>
+                                <li id="Manchester City" class="ui-state-default">Manchester City</li>
+                                <li id="Manchester United" class="ui-state-default">Manchester United</li>
+                                <li id="Newcastle United" class="ui-state-default">Newcastle United</li>
+                                <li id="Nottingham Forest" class="ui-state-default">Nottingham Forest</li>
+                                <li id="Sunderland" class="ui-state-default">Sunderland</li>
+                                <li id="Tottenham Hotspur" class="ui-state-default">Tottenham Hotspur</li>
+                                <li id="West Ham United" class="ui-state-default">West Ham United</li>
+                                <li id="Wolverhampton Wanderers" class="ui-state-default"> Wolverhampton Wanderers</li>
+                        </ol>
+                        <hr />
+                </div>
+
+                <input type="hidden" name="<h4>Finishing Positions</h4>" id="raw" />
+
+                <script type="text/javascript">
+                                function doSubmit() {
+                                        var name = $("#Name").val().trim();
+                                        name = name.replace(/"/g, "_");
+                                        name = name.replace(/'/g, "_");
+                                        name = name.replace(/>/g, "_");
+                                        name = name.replace(/</g, "_");
+                                        name = name.replace(/&/g, "_");
+
+                                        $("ol").attr("id", name);
+                                        $("#Name").val("<h3><a name='" + hashCode(name) + "'>" + name + "</a></h3>");
+
+                                        var mylist = document.getElementById('<h3>Finishing Positions</h3>');
+                                        var raw = document.getElementById('raw');
+                                        raw.value = mylist.innerHTML;
+                                        document.forms[0].submit();
+                                }
+                        </script>
+
+
+                <div id="blink">
+                        <b>Do not forget to add your name</b>
+                </div>
+
+                <p>
+
+                        <input disabled="disabled" id="send" type="Button" value="Submit"
+                                onClick="doSubmit()" />
+        </form>
+        <script src="Sortable.js"></script>
+
+        <script type="text/javascript">
+                new Sortable(document.getElementById('newsortable'), {
+                animation: 150,
+                ghostClass: 'blue-background-class'
+        });
+</script>
+</body>
+</html>
+

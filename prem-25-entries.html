@@ -1,0 +1,2179 @@
+<! -- TO DO
+
+1/ mouse pointer to a plus when moving items
+2/ 'entries' has problems with id attribute splitting across lines
+4/ Get team names from JSON
+
+-->
+<html>
+ <head>
+  <title>Premiership Predictions 2025-26</title>
+<script src="//code.jquery.com/jquery-3.0.0.js"></script>
+<script src="js/calculate-scores.js"></script>
+  <style>
+   body { font-family: arial; }
+   table {border: none;}
+
+    #sortable li { margin: 3px 3px 3px 3px; padding: 3px 3px 3px 3px;  }
+    #sortable li span { position: absolute; margin-left: -1.3em; }
+
+  </style>
+
+<link rel="icon" 
+      type="image/jpg" 
+      href="cat-in-a-fez-small.jpg ">
+
+ </head>
+<body>
+
+<img src="https://talksport.com/wp-content/uploads/sites/5/2025/05/manchester-uniteds-portuguese-head-coach-993872197.jpg" width="270">
+
+<h1> Premiership Predictions 2025-26 - Current Standings </h1>
+
+<p>Reminder:  Your score is the sum of the differences between your prediction and the actual finishing position.
+</p>
+
+<h2>Premier League Table</h2>
+<!-- final table goes here -->
+<div id="current-table"></div>
+
+<!-- pasted in ^^^^^ uncommet above for next year-->
+
+<!-- PASTE IN FINAL STANDINGS AT END & COMMENT OUT div ABOVE -->
+
+
+<!-- end of pasted in -->
+
+<h2> Final Standings</h2>
+
+<div id="current-scores"></div>
+<!-- pasted in ^^^^^ uncommet above for next year-->
+<!-- PASTE IN FINAL pREDICTIONS SCORES AT END & COMMENT OUT div ABOVE -->
+
+
+<!-- end of pasted in -->
+
+
+
+<h2>Entries</h2>
+
+
+<h3>Table From Last Year</h3>
+
+<ol id="table"><li>Liverpool</li><li>Arsenal</li><li>Manchester City</li><li>Chelsea</li><li>Newcastle United</li><li>Aston Villa</li><li>Nottingham
+Forest</li><li>Brighton &amp; Hove Albion</li><li>AFC Bournemouth</li><li>Brentford</li><li>Fulham</li><li>Crystal Palace</li><li>Everton</li><li>West Ham
+United</li><li>Manchester United</li><li>Wolverhampton Wanderers</li><li>Tottenham Hotspur</li><li>Leicester City</li><li>Ipswich
+Town</li><li>Southampton</li></ol>
+
+<!-- entries here -->
+
+<h3><a name='1955271559'>last year</a></h3>
+<h4>Finishing Positions</h4>
+
+<ol class="ui-sortable" id="last year"> 
+  <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+  <li id="Arsenal" class="ui-state-default" draggable="false" style="">Arsenal</li>
+  <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+  <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+  <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+  <li id="Aston Villa" class="ui-state-default" draggable="false" style="">Aston Villa</li>
+  <li id="Nottingham Forest" class="ui-state-default" draggable="false" style="">Nottingham Forest</li>
+  <li id="Brighton &amp; Hove Albion" class="ui-state-default" draggable="false" style="">Brighton &amp; Hove Albion</li>
+  <li id="AFC Bournemouth" class="ui-state-default">AFC Bournemouth</li> 
+  <li id="Brentford" class="ui-state-default">Brentford</li> 
+  <li id="Fulham" class="ui-state-default" draggable="false" style="">Fulham</li>
+  <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+  <li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li>
+  <li id="West Ham United" class="ui-state-default" draggable="false" style="">West Ham United</li>
+  <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+  <li id="Wolverhampton Wanderers" class="ui-state-default" draggable="false" style=""> Wolverhampton Wanderers</li>
+  <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+  <li id="Leeds United" class="ui-state-default" draggable="false" style="">Leeds</li>
+  <li id="Burnley" class="ui-state-default">Burnley</li> 
+  <li id="Sunderland" class="ui-state-default">Sunderland</li> 
+</ol> 
+
+<hr>
+
+<h3><a name='-898417771'>Joseph D Talbot</a></h3>
+
+<h4>Finishing Positions</h4>  
+                        <ol class="ui-sortable" id="Joseph D Talbot">
+                                <li id="Liverpool" class="ui-state-default" style="" draggable="false">Liverpool</li><li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li><li id="Arsenal" class="ui-state-default"
+draggable="false" style="">Arsenal</li>
+
+
+
+
+                                <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li><li id="Aston Villa"
+class="ui-state-default" style="" draggable="false">Aston Villa</li>
+
+
+                                <li id="Brighton &amp; Hove Albion" class="ui-state-default" style="" draggable="false">Brighton &amp; Hove Albion</li>
+
+                                <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li><li
+id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li><li id="Tottenham Hotspur"
+class="ui-state-default" style="" draggable="false">Tottenham Hotspur</li><li id="AFC Bournemouth" class="ui-state-default" style=""
+draggable="false">Bournemouth</li><li id="Nottingham Forest" class="ui-state-default" style="" draggable="false">Nottingham Forest</li><li id="Wolverhampton Wanderers" class="ui-state-default" draggable="false" style=""> Wolverhampton Wanderers</li><li
+id="Fulham" class="ui-state-default" style="" draggable="false">Fulham</li><li id="Crystal Palace" class="ui-state-default"
+draggable="false" style="">Crystal Palace </li><li id="Brentford" class="ui-state-default" style="" draggable="false">Brentford</li><li
+id="Everton" class="ui-state-default" style="" draggable="false">Everton</li>
+
+
+
+
+
+                                <li id="Leeds United" class="ui-state-default" style="" draggable="false">Leeds United</li><li id="West Ham United" class="ui-state-default" style="" draggable="false">West Ham United</li><li id="Burnley" class="ui-state-default" style=""
+draggable="false">Burnley </li><li id="Sunderland" class="ui-state-default" style="">Sunderland</li>
+
+
+
+                        </ol>
+                        <hr>
+
+
+
+<h3><a name='-1996008207'>Ian Teasdale (Leeds fan and hopeless optimist)</a></h3>
+
+<h4>Finishing Positions</h4>  
+                        <ol class="ui-sortable" id="Ian Teasdale (Leeds fan and hopeless optimist)">
+                                <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li><li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li><li id="Arsenal" class="ui-state-default">Arsenal</li> <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li><li id="Aston Villa" class="ui-state-default">Aston Villa</li> <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li><li id="Brighton &amp; Hove Albion" class="ui-state-default">Brighton &amp; Hove Albion</li> <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li><li id="Everton" class="ui-state-default">Everton</li> <li id="Manchester United" class="ui-state-default">Manchester United</li> <li id="Nottingham Forest" class="ui-state-default">Nottingham Forest</li><li id="Fulham" class="ui-state-default" draggable="false" style="">Fulham</li> 
+
+                                <li id="West Ham United" class="ui-state-default">West Ham United</li>
+                                <li id="AFC Bournemouth" class="ui-state-default" draggable="false" style="">Bournemouth</li><li id="Leeds United" class="ui-state-default" draggable="false" style="">Leeds United</li><li id="Burnley" class="ui-state-default" draggable="false" style="">Burnley </li><li id="Sunderland" class="ui-state-default" draggable="false" style="">Sunderland</li><li id="Brentford" class="ui-state-default" draggable="false" style="">Brentford</li><li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li><li id="Wolverhampton Wanderers" class="ui-state-default" draggable="false" style=""> Wolverhampton Wanderers</li>
+                        </ol>
+                        <hr>
+
+
+<h3><a name='-1143927423'>Zaminator</a></h3>
+
+<h4>Finishing Positions</h4>  
+                        <ol class="ui-sortable" id="Zaminator">
+                                <li id="Brentford" class="ui-state-default" draggable="false" style="">Brentford</li><li id="Arsenal"
+class="ui-state-default">Arsenal</li>
+
+                                <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li><li
+id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li><li id="Aston Villa"
+class="ui-state-default" draggable="false" style="">Aston Villa</li><li id="Newcastle United" class="ui-state-default" draggable="false"
+style="">Newcastle United</li><li id="Sunderland" class="ui-state-default" draggable="false" style="">Sunderland</li><li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li><li id="Everton" class="ui-state-default"
+draggable="false" style="">Everton</li><li id="Leeds United" class="ui-state-default" draggable="false" style="">Leeds United</li><li
+id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li><li id="Brighton &amp; Hove Albion"
+class="ui-state-default" draggable="false" style="">Brighton &amp; Hove Albion</li><li id="AFC Bournemouth" class="ui-state-default">Bournemouth</li>
+
+
+                                <li id="Burnley" class="ui-state-default">Burnley </li>
+                                <li id="Wolverhampton Wanderers" class="ui-state-default" draggable="false" style=""> Wolverhampton
+Wanderers</li><li id="Chelsea" class="ui-state-default">Chelsea</li>
+
+
+                                <li id="West Ham United" class="ui-state-default" draggable="false" style="">West Ham United</li><li
+id="Fulham" class="ui-state-default">Fulham</li>
+
+
+
+
+
+                                <li id="Nottingham Forest" class="ui-state-default">Nottingham Forest</li><li id="Crystal Palace"
+class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+
+
+
+
+                        </ol>
+                        <hr>
+
+
+ <h3><a name='-108142811'>Mark Rundle</a></h3>
+
+<h4>Finishing Positions</h4>  
+                        <ol class="ui-sortable" id="Mark Rundle">
+                                <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li><li id="Arsenal"
+class="ui-state-default">Arsenal</li>
+                                <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li><li
+id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li><li id="Aston Villa" class="ui-state-default">Aston Villa</li>
+                                <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+                                <li id="Brighton &amp; Hove Albion" class="ui-state-default" draggable="false" style="">Brighton &amp; Hove Albion</li>
+
+
+
+                                <li id="Nottingham Forest" class="ui-state-default" draggable="false" style="">Nottingham Forest</li><li
+id="AFC Bournemouth" class="ui-state-default" draggable="false" style="">Bournemouth</li><li id="Manchester United"
+class="ui-state-default" draggable="false" style="">Manchester United</li><li id="Tottenham Hotspur" class="ui-state-default"
+draggable="false" style="">Tottenham Hotspur</li>
+                                <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+                                <li id="Wolverhampton Wanderers" class="ui-state-default" draggable="false" style=""> Wolverhampton Wanderers</li><li id="Brentford" class="ui-state-default" draggable="false" style="">Brentford</li><li id="Fulham"
+class="ui-state-default">Fulham</li><li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li>
+
+
+
+
+                                <li id="West Ham United" class="ui-state-default" draggable="false" style="">West Ham United</li>
+
+                                <li id="Leeds United" class="ui-state-default" draggable="false" style="">Leeds United</li><li
+id="Burnley" class="ui-state-default" draggable="false" style="">Burnley </li>
+
+                                <li id="Sunderland" class="ui-state-default" draggable="false" style="">Sunderland</li>
+
+                        </ol>
+                        <hr>
+
+
+
+<h3><a name='-1403570791'>Stuart Mozley</a></h3>
+
+<h4>Finishing Positions</h4>:  
+                        <ol class="ui-sortable" id="Stuart Mozley">
+                                <li id="Arsenal" class="ui-state-default">Arsenal</li>
+                                <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+                                <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li><li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li><li id="Aston Villa" class="ui-state-default"
+draggable="false" style="">Aston Villa</li>
+
+                                <li id="Brighton &amp; Hove Albion" class="ui-state-default">Brighton &amp; Hove Albion</li>
+
+
+
+
+                                <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li><li
+id="AFC Bournemouth" class="ui-state-default" draggable="false" style="">Bournemouth</li><li id="Fulham"
+class="ui-state-default">Fulham</li>
+
+
+
+
+
+                                <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li><li
+id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li><li id="Nottingham Forest"
+class="ui-state-default" draggable="false">Nottingham Forest</li><li id="Crystal Palace" class="ui-state-default" draggable="false"
+style="">Crystal Palace </li><li id="Brentford" class="ui-state-default" draggable="false" style="">Brentford</li>
+
+
+                                <li id="West Ham United" class="ui-state-default">West Ham United</li>
+                                <li id="Wolverhampton Wanderers" class="ui-state-default" draggable="false" style=""> Wolverhampton Wanderers</li><li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li><li id="Burnley" class="ui-state-default"
+draggable="false" style="">Burnley </li><li id="Leeds United" class="ui-state-default" draggable="false" style="">Leeds United</li><li
+id="Sunderland" class="ui-state-default" draggable="false" style="">Sunderland</li>
+                        </ol>
+                        <hr>
+
+
+
+
+
+<h3><a name='-825811017'>Jordan Welsh</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Jordan Welsh">
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Arsenal" class="ui-state-default" draggable="false" style="">Arsenal</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Aston Villa" class="ui-state-default" draggable="false" style="">Aston Villa</li>
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default" draggable="false" style="">Brighton &amp; Hove Albion
+    </li>
+    <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+    <li id="Fulham" class="ui-state-default" draggable="false" style="">Fulham</li>
+    <li id="Nottingham Forest" class="ui-state-default" draggable="false" style="">Nottingham Forest</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="West Ham United" class="ui-state-default" draggable="false" style="">West Ham United</li>
+    <li id="Brentford" class="ui-state-default" draggable="false" style="">Brentford</li>
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+    <li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li>
+    <li id="Wolverhampton Wanderers" class="ui-state-default" draggable="false" style=""> Wolverhampton Wanderers</li>
+
+
+
+    <li id="AFC Bournemouth" class="ui-state-default" draggable="false" style="">Bournemouth</li>
+
+
+
+
+
+
+
+
+
+
+    <li id="Leeds United" class="ui-state-default" draggable="false" style="">Leeds United</li>
+    <li id="Burnley" class="ui-state-default" draggable="false" style="">Burnley </li>
+    <li id="Sunderland" class="ui-state-default" draggable="false" style="">Sunderland</li>
+</ol>
+<hr>
+
+
+
+
+<h3><a name='1677974936'>chat gpt odd-based</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="chat gpt odd-based">
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Arsenal" class="ui-state-default">Arsenal</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Aston Villa" class="ui-state-default">Aston Villa</li>
+    <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default" draggable="false" style="">Brighton &amp; Hove Albion
+    </li>
+    <li id="West Ham United" class="ui-state-default" draggable="false" style="">West Ham United</li>
+    <li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li>
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+    <li id="Fulham" class="ui-state-default" draggable="false" style="">Fulham</li>
+    <li id="AFC Bournemouth" class="ui-state-default">Bournemouth</li>
+    <li id="Nottingham Forest" class="ui-state-default" draggable="false" style="">Nottingham Forest</li>
+    <li id="Wolverhampton Wanderers" class="ui-state-default" draggable="false" style=""> Wolverhampton Wanderers</li>
+    <li id="Brentford" class="ui-state-default">Brentford</li>
+
+    <li id="Leeds United" class="ui-state-default" draggable="false" style="">Leeds United</li>
+    <li id="Sunderland" class="ui-state-default" draggable="false" style="">Sunderland</li>
+    <li id="Burnley" class="ui-state-default">Burnley </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ol>
+<hr>
+
+<h3><a name='1103207786'>chat gpt gut-feel</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="chat gpt gut-feel">
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Arsenal" class="ui-state-default">Arsenal</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Aston Villa" class="ui-state-default">Aston Villa</li>
+    <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+    <li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default" draggable="false" style="">Brighton &amp; Hove Albion
+    </li>
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+    <li id="West Ham United" class="ui-state-default" draggable="false" style="">West Ham United</li>
+    <li id="Fulham" class="ui-state-default" draggable="false" style="">Fulham</li>
+    <li id="Wolverhampton Wanderers" class="ui-state-default" draggable="false" style=""> Wolverhampton Wanderers</li>
+    <li id="Brentford" class="ui-state-default" draggable="false" style="">Brentfor
+        d</li>
+    <li id="Nottingham Forest" class="ui-state-default" draggable="false" style="">Nottingham Forest</li>
+    <li id="AFC Bournemouth" class="ui-state-default">Bournemouth</li>
+
+
+    <li id="Leeds United" class="ui-state-default" draggable="false" style="">Leeds United</li>
+    <li id="Sunderland" class="ui-state-default" draggable="false" style="">Sunderland</li>
+    <li id="Burnley" class="ui-state-default">Burnley </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ol>
+<hr>
+
+
+
+
+<h3><a name='1857609757'>Phil McNulty (BBC)</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Phil McNulty (BBC)">
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Arsenal" class="ui-state-default">Arsenal</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Aston Villa" class="ui-state-default">Aston Villa</li>
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+    <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+    <li id="Nottingham Forest" class="ui-state-default" draggable="false" style="">Nottingham Forest</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default" draggable="false" style="">Brighton &amp; Hove Albion
+    </li>
+    <li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li>
+    <li id="West Ham United" class="ui-state-default" draggable="false" style="">West Ham United</li>
+    <li id="Fulham" class="ui-state-default" draggable="false" style="">Fulham</li>
+    <li id="AFC Bournemouth" class="ui-state-default">Bournemouth</li>
+    <li id="Brentford" class="ui-state-default">Brentford</li>
+
+    <li id="Leeds United" class="ui-state-default" draggable="false" style="">Leeds United</li>
+    <li id="Wolverhampton Wanderers" class="ui-state-default" draggable="false" style=""> Wolverhampton Wanderers</li>
+    <li id="Sunderland" class="ui-state-default" draggable="false" style="">Sunderland</li>
+    <li id="Burnley" class="ui-state-default">Burnley </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ol>
+<hr>
+
+
+
+<h3><a name='2124547366'>Robert James</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Robert James">
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Arsenal" class="ui-state-default">Arsenal</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Aston Villa" class="ui-state-default" draggable="false" style="">Aston Villa</li>
+    <li id="AFC Bournemouth" class="ui-state-default" draggable="false" style="">Bournemouth</li>
+
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+    <li id="Nottingham Forest" class="ui-state-default" draggable="false" style="">Nottingham Forest</li>
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default" draggable="false" style="">Brighton &amp; Hove Albion
+    </li>
+
+
+
+    <li id="Fulham" class="ui-state-default" draggable="false" style="">Fulham</li>
+    <li id="Everton" class="ui-state-default">Everton</li>
+
+
+
+
+    <li id="Brentford" class="ui-state-default" draggable="false" style="">Brentford</li>
+
+    <li id="Leeds United" class="ui-state-default" draggable="false" style="">Leeds United</li>
+    <li id="West Ham United" class="ui-state-default" draggable="false" style="">West Ham United</li>
+    <li id="Burnley" class="ui-state-default" draggable="false" style="">Burnley </li>
+
+
+    <li id="Sunderland" class="ui-state-default" draggable="false" style="">Sunderland</li>
+    <li id="Wolverhampton Wanderers" class="ui-state-default"> Wolverhampton Wanderers</li>
+</ol>
+<hr>
+
+
+<h3><a name='-1923745465'>Andy Saunders</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Andy Saunders">
+
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Arsenal" class="ui-state-default" draggable="false" style="">Arsenal</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+    <li id="Aston Villa" class="ui-state-default" draggable="false" style="">Aston Villa</li>
+    <li id="Nottingham Forest" class="ui-state-default" draggable="false" style="">Nottingham Forest</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default" draggable="false" style="">Brighton &amp; Hove Albion
+    </li>
+    <li id="AFC Bournemouth" class="ui-state-default">Bournemouth</li>
+    <li id="Brentford" class="ui-state-default">Brentford</li>
+
+    <li id="Fulham" class="ui-state-default" draggable="false" style="">Fulham</li>
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+    <li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li>
+    <li id="West Ham United" class="ui-state-default" draggable="false" style="">West Ham United</li>
+    <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+    <li id="Wolverhampton Wanderers" class="ui-state-default" draggable="false" style=""> Wolverhampton Wanderers</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Leeds United" class="ui-state-default" draggable="false" style="">Leeds United</li>
+    <li id="Burnley" class="ui-state-default">Burnley </li>
+
+
+
+
+
+
+
+
+
+
+    <li id="Sunderland" class="ui-state-default">Sunderland</li>
+
+
+
+</ol>
+<hr>
+
+
+
+
+<h3><a name='1806075864'>Brendan</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Brendan">
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Arsenal" class="ui-state-default">Arsenal</li>
+
+
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+
+
+    <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+    <li id="Nottingham Forest" class="ui-state-default" draggable="false" style="">Nottingham Forest</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default" draggable="false" style="">Brighton &amp; Hove Albion
+    </li>
+
+    <li id="Fulham" class="ui-state-default" draggable="false" style="">Fulham</li>
+    <li id="Aston Villa" class="ui-state-default" draggable="false" style="">Aston Villa</li>
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+    <li id="Brentford" class="ui-state-default" draggable="false" style="">Brentford</li>
+    <li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Leeds United" class="ui-state-default">Leeds United</li>
+
+
+
+
+
+
+
+    <li id="AFC Bournemouth" class="ui-state-default" draggable="false" style="">Bournemouth</li>
+    <li id="Wolverhampton Wanderers" class="ui-state-default" draggable="false" style=""> Wolverhampton Wanderers</li>
+    <li id="West Ham United" class="ui-state-default" draggable="false" style="">West Ham United</li>
+    <li id="Burnley" class="ui-state-default" draggable="false" style="">Burnley </li>
+    <li id="Sunderland" class="ui-state-default" draggable="false" style="">Sunderland</li>
+
+</ol>
+<hr>
+
+
+
+<h3><a name='-1783097801'>Miguel the paella boy</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Miguel the paella boy">
+    <li id="Liverpool" class="ui-state-default" style="" draggable="false">Liverpool</li>
+    <li id="Manchester City" class="ui-state-default" style="" draggable="false">Manchester City</li>
+    <li id="Arsenal" class="ui-state-default" style="">Arsenal</li>
+    <li id="Chelsea" class="ui-state-default" style="" draggable="false">Chelsea</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" style="" draggable="false">Tottenham Hotspur</li>
+    <li id="Aston Villa" class="ui-state-default" style="" draggable="false">Aston Villa</li>
+    <li id="Manchester United" class="ui-state-default" style="" draggable="false">Manchester United</li>
+    <li id="West Ham United" class="ui-state-default" style="" draggable="false">West Ham United</li>
+    <li id="Everton" class="ui-state-default" style="" draggable="false">Everton</li>
+    <li id="Fulham" class="ui-state-default" style="" draggable="false">Fulham</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default" draggable="false" style="">Brighton &amp; Hove Albion
+    </li>
+    <li id="Newcastle United" class="ui-state-default" style="" draggable="false">Newcastle United</li>
+    <li id="Wolverhampton Wanderers" class="ui-state-default" style="" draggable="false"> Wolverhampton Wanderers</li>
+    <li i d="Nottingham Forest" class="ui-state-default" style="" draggable="false">Nottingham Forest</li>
+    <li id="Crystal Palace" class="ui-state-default" style="" draggable="false">Crystal Palace </li>
+    <li id="Leeds United" class="ui-state-default" style="" draggable="false">Leeds United</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <li id="Burnley" class="ui-state-default" draggable="false" style="">Burnley </li>
+    <li id="Brentford" class="ui-state-default" style="" draggable="false">Brentford</li>
+    <li id="Sunderland" class="ui-state-default" style="">Sunderland</li>
+
+
+
+    <li id="AFC Bournemouth" class="ui-state-default" style="" draggable="false">Bournemouth</li>
+</ol>
+<hr>
+
+
+
+<h3><a name='-1875810076'>Chris M</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Chris M">
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Arsenal" class="ui-state-default" draggable="false">Arsenal</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+    <li id="Aston Villa" class="ui-state-default">Aston Villa</li>
+    <li id="AFC Bournemouth" class="ui-state-default" draggable="false" style="">Bournemouth</li>
+    <li id="Nottingham Forest" class="ui-state-default" draggable="false" style="">Nottingham Forest</li>
+
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+    <li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default" draggable="false" style="">Brighton &amp; Hove Albion
+    </li>
+    <li id="Fulham" class="ui-state-default" draggable="false" style="">Fulham</li>
+    <li id="Brentford" class="ui-state-default" draggable="false" style="">Brentford</li>
+    <li id="Wolverhampton Wanderers" class="ui-state-default" draggable="false" style=""> Wolverhampton Wanderers</li>
+
+    <li id="West Ham United" class="ui-state-default" draggable="false" style="">West Ham United</li>
+    <li id="Sunderland" class="ui-state-default" draggable="false" style="">Sunderland</li>
+    <li id="Burnley" class="ui-state-default">Burnley </li>
+
+
+
+
+    <li id="Leeds United" class="ui-state-default">Leeds United</li>
+
+
+
+
+
+
+
+
+
+</ol>
+<hr>
+
+
+<h3><a name='-1485070298'>Matthew Buckett (with help)</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Matthew Buckett (with help)">
+
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Arsenal" class="ui-state-default" draggable="false" style="">Arsenal</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Aston Villa" class="ui-state-default">Aston Villa</li>
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default" draggable="false" style="">Brighton &amp; Hove Albion
+    </li>
+    <li id="Nottingham Forest" class="ui-state-default" draggable="false" style="">Nottingham Forest</li>
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+    <li id="Brentford" class="ui-state-default" draggable="false" style="">Brentford</li>
+    <li id="Fulham" class="ui-state-default" draggable="false" style="">Fulham</li>
+    <li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li>
+    <li id="West Ham United" class="ui-state-default" draggable="false" style="">West Ham United</li>
+    <li id="AFC Bournemouth" class="ui-state-default">Bournemouth</li>
+
+
+    <li id="Wolverhampton Wanderers" class="ui-state-default" draggable="false" style=""> Wolverhampton Wanderers</li>
+    <li id="Burnley" class="ui-state-default">Burnley </li>
+
+
+
+
+    <li id="Leeds United" class="ui-state-default">Leeds United</li>
+
+
+
+
+
+    <li id="Sunderland" class="ui-state-default">Sunderland</li>
+
+
+
+</ol>
+<hr>
+
+
+<h3><a name='353678612'>Kenny MacLennan</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Kenny MacLennan">
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Arsenal" class="ui-state-default">Arsenal</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Aston Villa" class="ui-state-default" draggable="false" style="">Aston Villa</li>
+    <li id="AFC Bournemouth" class="ui-state-default">Bournemouth</li>
+    <li id="Brentford" class="ui-state-default">Brentford</li>
+
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+    <li id="Fulham" class="ui-state-default" draggable="false" style="">Fulham</li>
+
+    <li id="Crystal Palace" class="ui-state-default">Crystal Palace </li>
+
+
+
+
+
+    <li id="Wolverhampton Wanderers" class="ui-state-default" draggable="false" style=""> Wolverhampton Wanderers</li>
+    <li id="Manchester United" class="ui-state-default">Manchester United</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default" draggable="false" style="">Brighton &amp; Hove Albion
+    </li>
+    <li id="Leeds United" class="ui-state-default" draggable="false" style="">Leeds United</li>
+    <li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li>
+    <li id="Nottingham Forest" class="ui-state-default">Nottingham Forest</li>
+    <li id="West Ham United" class="ui-state-default" draggable="false" style="">West Ham United</li>
+    <li id="Sunderland" class="ui-state-default">Sunderland</li>
+    <li id="Burnley" class="ui-state-default" draggable="false" style="">Burnley </li>
+
+
+</ol>
+<hr>
+
+
+<h3><a name='1152630430'>Martin Wynne</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Martin Wynne">
+    <li id="Arsenal" class="ui-state-default">Arsenal</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Aston Villa" class="ui-state-default">Aston Villa</li>
+
+
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Brentford" class="ui-state-default" draggable="false" style="">Brentford</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default">Brighton &amp; Hove Albion</li>
+
+
+    <li id="Crystal Palace" class="ui-state-default">Crystal Palace </li>
+
+    <li id="Fulham" class="ui-state-default">Fulham</li>
+
+
+
+    <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+    <li id="AFC Bournemouth" class="ui-state-default" draggable="false" style="">Bournemouth</li>
+
+    <li id="Nottingham Forest" class="ui-state-default">Nottingham Forest</li>
+    <li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li>
+    <li id="Wolverhampton Wanderers" class="ui-state-default" draggable="false" style=""> Wolverhampton Wanderers</li>
+    <li id="Leeds United" class="ui-state-default" draggable="false" style="">Leeds United</li>
+    <li id="West Ham United" class="ui-state-default" draggable="false" style="">West Ham United</li>
+    <li id="Burnley" class="ui-state-default" draggable="false" style="">Burnley </li>
+
+    <li id="Sunderland" class="ui-state-default" draggable="false" style="">Sunderland</li>
+
+</ol>
+<hr>
+
+
+
+<h3><a name='1005103702'>Mark Figg</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Mark Figg">
+    <li id="Arsenal" class="ui-state-default">Arsenal</li>
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Aston Villa" class="ui-state-default" draggable="false" style="">Aston Villa</li>
+
+
+
+
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+
+    <li id="Nottingham Forest" class="ui-state-default" draggable="false" style="">Nottingham Forest</li>
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+    <li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default" draggable="false" style="">Brighton &amp; Hove Albion
+    </li>
+    <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+    <li id="AFC Bournemouth" class="ui-state-default" draggable="false" style="">Bournemouth</li>
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+    <li id="Fulham" class="ui-state-default">Fulham</li>
+    <li id="Leeds United" class="ui-state-default">Leeds United</li>
+
+
+
+
+    <li id="West Ham United" class="ui-state-default" draggable="false" style="">West Ham United</li>
+    <li id="Sunderland" class="ui-state-default" draggable="false" style="">Sunderland</li>
+    <li id="Burnley" class="ui-state-default" draggable="false" style="">Burnley </li>
+    <li id="Brentford" class="ui-state-default" draggable="false" style="">Brentford</li>
+
+
+
+    <li id="Wolverhampton Wanderers" class="ui-state-default"> Wolverhampton Wanderers</li>
+</ol>
+<hr>
+
+
+
+<h3><a name='-550108904'>Andy Cooper</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Andy Cooper">
+    <li id="Arsenal" class="ui-state-default" style="">Arsenal</li>
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Manchester City" class="ui-state-default" style="" draggable="false">Manchester City</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" style="" draggable="false">Tottenham Hotspur</li>
+    <li id="Newcastle United" class="ui-state-default" style="" draggable="false">Newcastle United</li>
+    <li id="Manchester United" class="ui-state-default" style="" draggable="false">Manchester United</li>
+    <li id="Aston Villa" class="ui-state-default" style="">Aston Villa</li>
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+    <li id="Nottingham Forest" class="ui-state-default" style="" draggable="false">Nottingham Forest</li>
+    <li id="AFC Bournemouth" class="ui-state-default" style="">Bournemouth</li>
+
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default" style="">Brighton &amp; Hove Albion</li>
+
+
+
+    <li id="Fulham" class="ui-state-default" style="" draggable="false">Fulham</li>
+    <li id="Brentford" class="ui-state-default" style="" draggable="false">Brentford</li>
+    <li id="Everton" class="ui-state-default" style="">Everton</li>
+
+    <li id="Leeds United" class="ui-state-default" style="">Leeds United</li>
+
+
+
+
+
+    <li id="Sunderland" class="ui-state-default" style="">Sunderland</li>
+
+    <li id="Burnley" class="ui-state-default" style="" draggable="false">Burnley </li>
+    <li id="West Ham United" class="ui-state-default" style="">West Ham United</li>
+    <li id="Wolverhampton Wanderers" class="ui-state-default" style=""> Wolverhampton Wanderers</li>
+</ol>
+<hr>
+
+
+
+
+<h3><a name='-1186983032'>Matt Ingram</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Matt Ingram">
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Arsenal" class="ui-state-default">Arsenal</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+    <li id="Nottingham Forest" class="ui-state-default" draggable="false" style="">Nottingham Forest</li>
+    <li id="Aston Villa" class="ui-state-default">Aston Villa</li>
+
+
+
+
+
+
+    <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+    <li id="Fulham" class="ui-state-default" draggable="false" style="">Fulham</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default" draggable="false" style="">Brighton &amp; Hove Albion
+    </li>
+    <li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li>
+
+
+
+
+
+
+    <li id="Brentford" class="ui-state-default" draggable="false" style="">Brentford</li>
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+
+    <li id="AFC Bournemouth" class="ui-state-default" draggable="false" style="">Bournemouth</li>
+    <li id="Sunderland" class="ui-state-default" draggable="false" style="">Sunderland</li>
+
+    <li id="Wolverhampton Wanderers" class="ui-state-default"> Wolverhampton Wanderers</li>
+    <li id="West Ham United" class="ui-state-default" draggable="false" style="">West Ham United</li>
+    <li id="Burnley" class="ui-state-default" draggable="false" style="">Burnley </li>
+    <li id="Leeds United" class="ui-state-default" draggable="false" style="">Leeds United</li>
+</ol>
+<hr>
+
+
+
+
+<h3><a name='-1982262072'>Selwyn Ã° - Ã° Â´Ã³ Â§Ã³ Â¢Ã³ Â·Ã³ Â¬Ã³ Â³Ã³ Â¿ walking football world champion 2025</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Selwyn Ã°  - Ã° Â´Ã³  Â§Ã³  Â¢Ã³  Â·Ã³  Â¬Ã³  Â³Ã³  Â¿ walking football world champion 2025">
+    <li id="Arsenal" class="ui-state-default">Arsenal</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+    <li id="Aston Villa" class="ui-state-default" draggable="false" style="">Aston Villa</li>
+    <li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li>
+    <li id="AFC Bournemouth" class="ui-state-default">Bournemouth</li>
+
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default">Brighton &amp; Hove Albion</li>
+
+
+    <li id="Fulham" class="ui-state-default" draggable="false" style="">Fulham</li>
+    <li id="Nottingham Forest" class="ui-state-default" draggable="false" style="">Nottingham Forest</li>
+
+
+    <li id="Leeds United" class="ui-state-default">Leeds United</li>
+
+
+
+    <li id="Wolverhampton Wanderers" class="ui-state-default" draggable="false" style=""> Wolverhampton Wanderers</li>
+    <li id="Sunderland" class="ui-state-default" draggable="false" style="">Sunderland</li>
+    <li id="West Ham United" class="ui-state-default" draggable="false" style="">West Ham United</li>
+    <li id="Brentford" class="ui-state-default" draggable="false" style="">Brentford</li>
+    <li id="Burnley" class="ui-state-default" draggable="false" style="">Burnley </li>
+
+
+
+
+
+</ol>
+<hr>
+
+
+
+<h3><a name='1788709608'>Jason Harris</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Jason Harris">
+
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+    <li id="Arsenal" class="ui-state-default" draggable="false" style="">Arsenal</li>
+    <li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li>
+    <li id="Aston Villa" class="ui-state-default">Aston Villa</li>
+
+
+
+    <li id="Burnley" class="ui-state-default">Burnley </li>
+    <li id="Chelsea" class="ui-state-default">Chelsea</li>
+    <li id="Crystal Palace" class="ui-state-default">Crystal Palace </li>
+
+    <li id="Fulham" class="ui-state-default">Fulham</li>
+    <li id="Leeds United" class="ui-state-default">Leeds United</li>
+
+
+
+    <li id="Newcastle United" class="ui-state-default">Newcastle United</li>
+
+    <li id="Sunderland" class="ui-state-default">Sunderland</li>
+
+    <li id="West Ham United" class="ui-state-default">West Ham United</li>
+    <li id="Wolverhampton Wanderers" class="ui-state-default"> Wolverhampton Wanderers</li>
+    <li id="Brentford" class="ui-state-default" draggable="false" style="">Brentford</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default" draggable="false" style="">Brighton &amp; Hove Albion
+    </li>
+    <li id="Nottingham Forest" class="ui-state-default" draggable="false" style="">Nottingham Forest</li>
+    <li id="AFC Bournemouth" class="ui-state-default" draggable="false" style="">Bournemouth</li>
+</ol>
+<hr>
+
+
+
+
+<h3><a name='-385479423'>Chris Mackie</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Chris Mackie">
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Arsenal" class="ui-state-default">Arsenal</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+    <li id="Aston Villa" class="ui-state-default">Aston Villa</li>
+
+
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+    <li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li>
+    <li id="Nottingham Forest" class="ui-state-default" draggable="false" style="">Nottingham Forest</li>
+
+
+
+
+    <li id="Brentford" class="ui-state-default" draggable="false" style="">Brentford</li>
+    <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+
+
+
+
+
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default" draggable="false" style="">Brighton &amp; Hove Albion
+    </li>
+    <li id="Wolverhampton Wanderers" class="ui-state-default" draggable="false" style=""> Wolverhampton Wanderers</li>
+    <li id="Fulham" class="ui-state-default" draggable="false" style="">Fulham</li>
+    <li id="AFC Bournemouth" class="ui-state-default" draggable="false" style="">Bournemouth</li>
+    <li id="West Ham United" class="ui-state-default" draggable="false" style="">West Ham United</li>
+    <li id="Burnley" class="ui-state-default" draggable="false" style="">Burnley </li>
+
+
+
+    <li id="Sunderland" class="ui-state-default" draggable="false" style="">Sunderland</li>
+    <li id="Leeds United" class="ui-state-default" draggable="false" style="">Leeds United</li>
+</ol>
+<hr>
+
+
+
+<h3><a name='-1011758746'>Finlay Birnie</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Finlay Birnie">
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Liverpool" class="ui-state-default" style="" draggable="false">Liverpool</li>
+    <li id="Chelsea" class="ui-state-default" style="" draggable="false">Chelsea</li>
+    <li id="Arsenal" class="ui-state-default" style="" draggable="false">Arsenal</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Aston Villa" class="ui-state-default" style="">Aston Villa</li>
+    <li id="Newcastle United" class="ui-state-default" style="" draggable="false">Newcastle United</li>
+    <li id="AFC Bournemouth" class="ui-state-default" draggable="false" style="">Bournemouth</li>
+    <li id="Manchester United" class="ui-state-default" style="" draggable="false">Manchester United</li>
+    <li id="Fulham" class="ui-state-default" style="" draggable="false">Fulham</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default" style="">Brighton &amp; Hove Albion</li>
+
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+
+
+
+
+
+
+
+
+    <li id="Nottingham Forest" class="ui-state-default" style="">Nottingham Forest</li>
+    <li id="Brentford" class="ui-state-default" style="" draggable="false">Brentford</li>
+    <li id="Everton" class="ui-state-default" style="" draggable="false">Everton</li>
+    <li id="West Ham United" class="ui-state-default" style="" draggable="false">West Ham United</li>
+    <li id="Sunderland" class="ui-state-default" style="">Sunderland</li>
+
+
+    <li id="Wolverhampton Wanderers" class="ui-state-default" style=""> Wolverhampton Wanderers</li>
+    <li id="Leeds United" class="ui-state-default" style="" draggable="false">Leeds United</li>
+    <li id="Burnley" class="ui-state-default" style="" draggable="false">Burnley </li>
+</ol>
+<hr>
+
+
+
+
+
+
+<h3><a name='-638526533'>William Partridge</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="William Partridge">
+    <li id="Arsenal" class="ui-state-default" style="" draggable="false">Arsenal</li>
+    <li id="Liverpool" class="ui-state-default" style="" draggable="false">Liverpool</li>
+
+    <li id="Chelsea" class="ui-state-default" style="" draggable="false">Chelsea</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" style="" draggable="false">Tottenham Hotspur</li>
+    <li id="Manchester City" class="ui-state-default" style="" draggable="false">Manchester City</li>
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+    <li id="Nottingham Forest" class="ui-state-default" style="" draggable="false">Nottingham Forest</li>
+    <li id="Aston Villa" class="ui-state-default" draggable="false" style="">Aston Villa</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default" style="" draggable="false">Brighton &amp; Hove Albion
+    </li>
+    <li id="AFC Bournemouth" class="ui-state-default" style="">Bournemouth</li>
+
+
+
+    <li id="Brentford" class="ui-state-default" style="" draggable="false">Brentford</li>
+
+    <li id="Everton" class="ui-state-default" style="">Everton</li>
+    <li id="Manchester United" class="ui-state-default" style="" draggable="false">Manchester United</li>
+    <li id="Crystal Palace" class="ui-state-default" style="" draggable="false">Crystal Palace </li>
+    <li id="Fulham" class="ui-state-default" style="">Fulham</li>
+    <li id="Leeds United" class="ui-state-default" style="">Leeds United</li>
+
+
+
+
+
+
+
+    <li id="Burnley" class="ui-state-default" style="" draggable="false">Burnley </li>
+    <li id="Sunderland" class="ui-state-default" style="" draggable="false">Sunderland</li>
+    <li id="Wolverhampton Wanderers" class="ui-state-default" draggable="false" style=""> Wolverhampton Wanderers</li>
+    <li id="West Ham United" class="ui-state-default" style="">West Ham United</li>
+
+</ol>
+<hr>
+
+
+
+<h3><a name='-1280830584'>Bernie Garcia</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Bernie Garcia">
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Arsenal" class="ui-state-default">Arsenal</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Nottingham Forest" class="ui-state-default" draggable="false" style="">Nottingham Forest</li>
+    <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+    <li id="Aston Villa" class="ui-state-default">Aston Villa</li>
+    <li id="AFC Bournemouth" class="ui-state-default">Bournemouth</li>
+
+
+
+
+
+
+    <li id="Fulham" class="ui-state-default">Fulham</li>
+    <li id="Leeds United" class="ui-state-default">Leeds United</li>
+
+
+
+    <li id="Newcastle United" class="ui-state-default">Newcastle United</li>
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+    <li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li>
+
+    <li id="West Ham United" class="ui-state-default" draggable="false" style="">West Ham United</li>
+    <li id="Wolverhampton Wanderers" class="ui-state-default" draggable="false" style=""> Wolverhampton Wanderers</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default" draggable="false" style="">Brighton &amp; Hove Albion
+    </li>
+    <li id="Sunderland" class="ui-state-default">Sunderland</li>
+    <li id="Brentford" class="ui-state-default" draggable="false" style="">Brentford</li>
+
+    <li id="Burnley" class="ui-state-default" draggable="false" style="">Burnley </li>
+
+</ol>
+<hr>
+
+
+
+<h3><a name='1862637140'>Steve Eyre</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Steve Eyre">
+
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li>
+    <li id="Burnley" class="ui-state-default" draggable="false" style="">Burnley </li>
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+    <li id="Aston Villa" class="ui-state-default">Aston Villa</li>
+    <li id="AFC Bournemouth" class="ui-state-default">Bournemouth</li>
+    <li id="Brentford" class="ui-state-default">Brentford</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default">Brighton &amp; Hove Albion</li>
+
+
+    <li id="Crystal Palace" class="ui-state-default">Crystal Palace </li>
+
+    <li id="Fulham" class="ui-state-default">Fulham</li>
+    <li id="Nottingham Forest" class="ui-state-default" draggable="false" style="">Nottingham Forest</li>
+    <li id="Leeds United" class="ui-state-default">Leeds United</li>
+
+
+
+
+
+    <li id="West Ham United" class="ui-state-default" draggable="false" style="">West Ham United</li>
+    <li id="Sunderland" class="ui-state-default">Sunderland</li>
+    <li id="Tottenham Hotspur" class="ui-state-default">Tottenham Hotspur</li>
+
+    <li id="Wolverhampton Wanderers" class="ui-state-default"> Wolverhampton Wanderers</li>
+    <li id="Arsenal" class="ui-state-default" draggable="false" style="">Arsenal</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+</ol>
+<hr>
+
+
+
+<h3><a name='-1020129640'>Nigel Emm</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Nigel Emm">
+
+    <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+    <li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li>
+    <li id="Arsenal" class="ui-state-default" draggable="false" style="">Arsenal</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default" draggable="false" style="">Brighton &amp; Hove Albion
+    </li>
+    <li id="AFC Bournemouth" class="ui-state-default" draggable="false" style="">Bournemouth</li>
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+
+
+
+
+
+
+
+
+
+    <li id="Nottingham Forest" class="ui-state-default">Nottingham Forest</li>
+    <li id="Wolverhampton Wanderers" class="ui-state-default" draggable="false" style=""> Wolverhampton Wanderers</li>
+    <li id="Aston Villa" class="ui-state-default" draggable="false" style="">Aston Villa</li>
+    <li id="Brentford" class="ui-state-default" draggable="false" style="">Brentford</li>
+
+
+    <li id="West Ham United" class="ui-state-default">West Ham United</li>
+    <li id="Fulham" class="ui-state-default" draggable="false" style="">Fulham</li>
+    <li id="Burnley" class="ui-state-default" draggable="false" style="">Burnley </li>
+    <li id="Sunderland" class="ui-state-default" draggable="false" style="">Sunderland</li>
+    <li id="Leeds United" class="ui-state-default" draggable="false" style="">Leeds United</li>
+
+</ol>
+<hr>
+
+
+<h3><a name='-258592176'>Simon Burford</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Simon Burford">
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Arsenal" class="ui-state-default" draggable="false" style="">Arsenal</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+    <li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default" draggable="false" style="">Brighton &amp; Hove Albion
+    </li>
+    <li id="Leeds United" class="ui-state-default" draggable="false" style="">Leeds United</li>
+    <li id="AFC Bournemouth" class="ui-state-default">Bournemouth</li>
+    <li id="Sunderland" class="ui-state-default" draggable="false" style="">Sunderland</li>
+    <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+    <li id="Nottingham Forest" class="ui-state-default" draggable="false" style="">Nottingham Forest</li>
+    <li id="Aston Villa" class="ui-state-default" draggable="false" style="">Aston Villa</li>
+    <li id="West Ham United" class="ui-state-default" draggable="false" style="">West Ham United</li>
+    <li id="Brentford" class="ui-state-default" draggable="false" style="">Brentford</li>
+    <li id="Fulham" class="ui-state-default" draggable="false" style="">Fulham</li>
+    <li id="Burnley" class="ui-state-default" draggable="false" style="">Burnley </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <li id="Wolverhampton Wanderers" class="ui-state-default"> Wolverhampton Wanderers</li>
+</ol>
+<hr>
+
+
+
+<h3><a name='301537872'>after 3 games</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="after 3 games">
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Arsenal" class="ui-state-default">Arsenal</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li>
+    <li id="Sunderland" class="ui-state-default" draggable="false" style="">Sunderland</li>
+    <li id="AFC Bournemouth" class="ui-state-default">Bournemouth</li>
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+    <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+    <li id="Nottingham Forest" class="ui-state-default" draggable="false" style="">Nottingham Forest</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default" draggable="false" style="">Brighton &amp; Hove Albion
+    </li>
+    <li id="Leeds United" class="ui-state-default" draggable="false" style="">Leeds United</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Burnley" class="ui-state-default" draggable="false" style="">Burnley </li>
+    <li id="Brentford" class="ui-state-default">Brentford</li>
+
+
+
+
+
+
+
+
+
+
+    <li id="West Ham United" class="ui-state-default" draggable="false" style="">West Ham United</li>
+    <li id="Newcastle United" class="ui-state-default">Newcastle United</li>
+    <li id="Fulham" class="ui-state-default" draggable="false" style="">Fulham</li>
+
+
+
+
+    <li id="Aston Villa" class="ui-state-default" draggable="false" style="">Aston Villa</li>
+    <li id="Wolverhampton Wanderers" class="ui-state-default"> Wolverhampton Wanderers</li>
+</ol>
+<hr>
+
+
+<h3><a name='-1819579479'>Sherry</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Sherry">
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Arsenal" class="ui-state-default">Arsenal</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+    <li id="Nottingham Forest" class="ui-state-default" draggable="false" style="">Nottingham Forest</li>
+    <li id="AFC Bournemouth" class="ui-state-default" draggable="false" style="">Bournemouth</li>
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+    <li id="Aston Villa" class="ui-state-default">Aston Villa</li>
+    <li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li>
+
+    <li id="Fulham" class="ui-state-default" draggable="false" style="">Fulham</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default" draggable="false" style="">Brighton &amp; Hove Albion
+    </li>
+    <li id="Brentford" class="ui-state-default">Brentford</li>
+
+
+
+
+
+
+
+
+
+
+
+
+    <li id="Sunderland" class="ui-state-default" draggable="false" style="">Sunderland</li>
+    <li id="West Ham United" class="ui-state-default" draggable="false" style="">West Ham United</li>
+    <li id="Burnley" class="ui-state-default" draggable="false" style="">Burnley </li>
+    <li id="Leeds United" class="ui-state-default" draggable="false" style="">Leeds United</li>
+
+
+    <li id="Wolverhampton Wanderers" class="ui-state-default"> Wolverhampton Wanderers</li>
+</ol>
+<hr>
+
+
+
+<h3><a name='66127'>Asa</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Asa">
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Arsenal" class="ui-state-default">Arsenal</li>
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+    <li id="AFC Bournemouth" class="ui-state-default" draggable="false" style="">Bournemouth</li>
+    <li id="Aston Villa" class="ui-state-default">Aston Villa</li>
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+    <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default">Brighton &amp; Hove Albion</li>
+
+
+
+    <li id="Nottingham Forest" class="ui-state-default" draggable="false" style="">Nottingham Forest</li>
+    <li id="Everton" class="ui-state-default">Everton</li>
+
+
+
+
+
+
+
+
+
+
+    <li id="Wolverhampton Wanderers" class="ui-state-default"> Wolverhampton Wanderers</li>
+    <li id="West Ham United" class="ui-state-default" draggable="false" style="">West Ham United</li>
+    <li id="Leeds United" class="ui-state-default" draggable="false" style="">Leeds United</li>
+    <li id="Brentford" class="ui-state-default" draggable="false" style="">Brentford</li>
+    <li id="Sunderland" class="ui-state-default" draggable="false" style="">Sunderland</li>
+    <li id="Fulham" class="ui-state-default" draggable="false" style="">Fulham</li>
+    <li id="Burnley" class="ui-state-default" draggable="false" style="">Burnley </li>
+</ol>
+<hr>
+
+
+
+<h3><a name='265445033'>Yannick</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Yannick">
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Arsenal" class="ui-state-default" draggable="false" style="">Arsenal</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Aston Villa" class="ui-state-default">Aston Villa</li>
+
+
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default">Brighton &amp; Hove Albion</li>
+
+
+
+
+
+
+
+
+    <li id="Manchester United" class="ui-state-default">Manchester United</li>
+
+    <li id="Nottingham Forest" class="ui-state-default">Nottingham Forest</li>
+    <li id="Fulham" class="ui-state-default" draggable="false" style="">Fulham</li>
+
+    <li id="AFC Bournemouth" class="ui-state-default" draggable="false" style="">Bournemouth</li>
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+    <li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li>
+    <li id="Sunderland" class="ui-state-default" draggable="false" style="">Sunderland</li>
+    <li id="Leeds United" class="ui-state-default" draggable="false" style="">Leeds United</li>
+    <li id="West Ham United" class="ui-state-default">West Ham United</li>
+    <li id="Brentford" class="ui-state-default" draggable="false" style="">Brentford</li>
+    <li id="Wolverhampton Wanderers" class="ui-state-default" draggable="false" style=""> Wolverhampton Wanderers</li>
+    <li id="Burnley" class="ui-state-default" draggable="false" style="">Burnley </li>
+
+</ol>
+<hr>
+
+
+
+<h3><a name='-200829271'>David Evans</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="David Evans">
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Arsenal" class="ui-state-default">Arsenal</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Aston Villa" class="ui-state-default">Aston Villa</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default" draggable="false" style="">Brighton &amp; Hove Albion
+    </li>
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+    <li id="Nottingham Forest" class="ui-state-default" draggable="false" style="">Nottingham Forest</li>
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+    <li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li>
+    <li id="Fulham" class="ui-state-default" draggable="false" style="">Fulham</li>
+    <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+    <li id="Sunderland" class="ui-state-default" draggable="false" style="">Sunderland</li>
+    <li id="AFC Bournemouth" class="ui-state-default">Bournemouth</li>
+    <li id="Leeds United" class="ui-state-default" draggable="false" style="">Leeds United</li>
+    <li id="West Ham United" class="ui-state-default" draggable="false" style="">West Ham United</li>
+    <li id="Brentford" class="ui-state-default">Brentford</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <li id="Wolverhampton Wanderers" class="ui-state-default"> Wolverhampton Wanderers</li>
+    <li id="Burnley" class="ui-state-default" draggable="false" style="">Burnley </li>
+</ol>
+<hr>
+
+
+
+<h3><a name='1108910500'>Mark Walsh</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Mark Walsh">
+    <li id="Arsenal" class="ui-state-default" style="">Arsenal</li>
+    <li id="Liverpool" class="ui-state-default" style="" draggable="false">Liverpool</li>
+    <li id="Chelsea" class="ui-state-default" style="" draggable="false">Chelsea</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" style="" draggable="false">Tottenham Hotspur</li>
+    <li id="Everton" class="ui-state-default" style="" draggable="false">Everton</li>
+    <li id="Manchester City" class="ui-state-default" style="" draggable="false">Manchester City</li>
+    <li id="AFC Bournemouth" class="ui-state-default" style="">Bournemouth</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default" style="" draggable="false">Brighton &amp; Hove Albion
+    </li>
+    <li id="Brentford" class="ui-state-default" style="">Brentford</li>
+
+    <li id="Fulham" class="ui-state-default" style="" draggable="false">Fulham</li>
+    <li id="Newcastle United" class="ui-state-default" style="" draggable="false">Newcastle United</li>
+    <li id="Crystal Palace" class="ui-state-default" style="" draggable="false">Crystal Palace </li>
+    <li id="Leeds United" class="ui-state-default" style="" draggable="false">Leeds United</li>
+    <li id="Nottingham Forest" class="ui-state-default" style="" draggable="false">Nottingham Forest</li>
+
+
+
+    <li id="Aston Villa" class="ui-state-default" style="" draggable="false">Aston Villa</li>
+
+
+    <li id="Manchester United" class="ui-state-default" style="">Manchester United</li>
+
+    <li id="Sunderland" class="ui-state-default" style="" draggable="false">Sunderland</li>
+
+
+    <li id="Burnley" class="ui-state-default" style="" draggable="false">Burnley </li>
+    <li id="West Ham United" class="ui-state-default" style="">West Ham United</li>
+    <li id="Wolverhampton Wanderers" class="ui-state-default" style=""> Wolverhampton Wanderers</li>
+</ol>
+<hr>
+
+
+<h3><a name='-1210293459'>Ray Stacey</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Ray Stacey">
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Arsenal" class="ui-state-default">Arsenal</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Aston Villa" class="ui-state-default">Aston Villa</li>
+
+
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default">Brighton &amp; Hove Albion</li>
+
+
+    <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+    <li id="Everton" class="ui-state-default">Everton</li>
+    <li id="Fulham" class="ui-state-default">Fulham</li>
+    <li id="Nottingham Forest" class="ui-state-default" draggable="false" style="">Nottingham Forest</li>
+    <li id="AFC Bournemouth" class="ui-state-default" draggable="false" style="">Bournemouth</li>
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+
+
+
+
+
+    <li id="Brentford" class="ui-state-default" draggable="false" style="">Brentford</li>
+    <li id="Wolverhampton Wanderers" class="ui-state-default" draggable="false" style=""> Wolverhampton Wanderers</li>
+    <li id="Sunderland" class="ui-state-default" draggable="false" style="">Sunderland</li>
+    <li id="West Ham United" class="ui-state-default" draggable="false" style="">West Ham United</li>
+    <li id="Leeds United" class="ui-state-default" draggable="false" style="">Leeds United</li>
+    <li id="Burnley" class="ui-state-default" draggable="false" style="">Burnley </li>
+
+
+</ol>
+<hr>
+
+
+
+
+<h3><a name='1956242460'>Adam M</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Adam M">
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Arsenal" class="ui-state-default">Arsenal</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li>
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+    <li id="AFC Bournemouth" class="ui-state-default">Bournemouth</li>
+    <li id="Aston Villa" class="ui-state-default" draggable="false" style="">Aston Villa</li>
+    <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default">Brighton &amp; Hove Albion</li>
+
+
+
+
+
+
+
+
+
+
+    <li id="Nottingham Forest" class="ui-state-default">Nottingham Forest</li>
+    <li id="Fulham" class="ui-state-default" draggable="false" style="">Fulham</li>
+
+
+
+    <li id="Sunderland" class="ui-state-default" draggable="false" style="">Sunderland</li>
+    <li id="Brentford" class="ui-state-default" draggable="false" style="">Brentford</li>
+    <li id="Leeds United" class="ui-state-default" draggable="false" style="">Leeds United</li>
+    <li id="Burnley" class="ui-state-default" draggable="false" style="">Burnley </li>
+    <li id="West Ham United" class="ui-state-default" draggable="false" style="">West Ham United</li>
+    <li id="Wolverhampton Wanderers" class="ui-state-default" draggable="false" style=""> Wolverhampton Wanderers</li>
+</ol>
+<hr>
+
+
+
+
+<h3><a name='108609389'>Sunil Nair</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Sunil Nair">
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Arsenal" class="ui-state-default">Arsenal</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li>
+    <li id="Aston Villa" class="ui-state-default">Aston Villa</li>
+    <li id="AFC Bournemouth" class="ui-state-default">Bournemouth</li>
+    <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+    <li id="Fulham" class="ui-state-default" draggable="false" style="">Fulham</li>
+    <li id="Nottingham Forest" class="ui-state-default" draggable="false" style="">Nottingham Forest</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default" draggable="false" style="">Brighton &amp; Hove Albion
+    </li>
+
+
+
+
+
+
+    <li id="Leeds United" class="ui-state-default" draggable="false" style="">Leeds United</li>
+    <li id="West Ham United" class="ui-state-default" draggable="false" style="">West Ham United</li>
+    <li id="Wolverhampton Wanderers" class="ui-state-default" draggable="false" style=""> Wolverhampton Wanderers</li>
+    <li id="Brentford" class="ui-state-default" draggable="false" style="">Brentford</li>
+
+
+
+
+    <li id="Burnley" class="ui-state-default" draggable="false" style="">Burnley </li>
+    <li id="Sunderland" class="ui-state-default">Sunderland</li>
+
+
+
+</ol>
+<hr>
+
+
+
+<h3><a name='2087271264'>Neil French</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Neil French">
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Arsenal" class="ui-state-default">Arsenal</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+    <li id="AFC Bournemouth" class="ui-state-default" draggable="false" style="">Bournemouth</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default" draggable="false" style="">Brighton &amp; Hove Albion
+    </li>
+    <li id="Nottingham Forest" class="ui-state-default" draggable="false" style="">Nottingham Forest</li>
+    <li id="Brentford" class="ui-state-default" draggable="false" style="">Brentford</li>
+
+
+
+
+    <li id="Everton" class="ui-state-default">Everton</li>
+    <li id="Aston Villa" class="ui-state-default" draggable="false" style="">Aston Villa</li>
+    <li id="Fulham" class="ui-state-default">Fulham</li>
+
+
+
+
+    <li id="Burnley" class="ui-state-default" draggable="false" style="">Burnley </li>
+
+    <li id="Sunderland" class="ui-state-default">Sunderland</li>
+    <li id="Leeds United" class="ui-state-default" draggable="false" style="">Leeds United</li>
+
+    <li id="West Ham United" class="ui-state-default">West Ham United</li>
+    <li id="Wolverhampton Wanderers" class="ui-state-default"> Wolverhampton Wanderers</li>
+</ol>
+<hr>
+
+
+
+<h3><a name='53632134'>James Turner</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="James Turner">
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Arsenal" class="ui-state-default">Arsenal</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Aston Villa" class="ui-state-default">Aston Villa</li>
+    <li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li>
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+    <li id="AFC Bournemouth" class="ui-state-default">Bournemouth</li>
+    <li id="Brentford" class="ui-state-default">Brentford</li>
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default">Brighton &amp; Hove Albion</li>
+
+
+
+
+    <li id="Fulham" class="ui-state-default">Fulham</li>
+    <li id="Leeds United" class="ui-state-default">Leeds United</li>
+
+
+
+
+
+    <li id="Sunderland" class="ui-state-default">Sunderland</li>
+
+    <li id="West Ham United" class="ui-state-default">West Ham United</li>
+    <li id="Nottingham Forest" class="ui-state-default" draggable="false" style="">Nottingham Forest</li>
+    <li id="Burnley" class="ui-state-default" draggable="false" style="">Burnley </li>
+    <li id="Wolverhampton Wanderers" class="ui-state-default"> Wolverhampton Wanderers</li>
+</ol>
+<hr>
+
+
+
+
+<h3><a name='604305056'>James (Jay-Jay) O-Cox-a</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="James (Jay-Jay) O-Cox-a">
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Arsenal" class="ui-state-default">Arsenal</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default" draggable="false" style="">Brighton &amp; Hove Albion
+    </li>
+    <li id="Aston Villa" class="ui-state-default">Aston Villa</li>
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+    <li id="AFC Bournemouth" class="ui-state-default">Bournemouth</li>
+    <li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li>
+    <li id="Brentford" class="ui-state-default">Brentford</li>
+
+
+
+
+
+    <li id="Fulham" class="ui-state-default">Fulham</li>
+    <li id="Wolverhampton Wanderers" class="ui-state-default" draggable="false" style=""> Wolverhampton Wanderers</li>
+    <li id="Leeds United" class="ui-state-default">Leeds United</li>
+
+
+    <li id="Manchester United" class="ui-state-default">Manchester United</li>
+
+    <li id="Nottingham Forest" class="ui-state-default" draggable="false" style="">Nottingham Forest</li>
+    <li id="Burnley" class="ui-state-default" draggable="false" style="">Burnley </li>
+    <li id="West Ham United" class="ui-state-default" draggable="false" style="">West Ham United</li>
+    <li id="Sunderland" class="ui-state-default">Sunderland</li>
+
+
+
+</ol>
+<hr>
+
+
+
+
+<h3><a name='934923282'>StefanLutener</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="StefanLutener">
+    <li id="Arsenal" class="ui-state-default">Arsenal</li>
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Aston Villa" class="ui-state-default">Aston Villa</li>
+
+
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default">Brighton &amp; Hove Albion</li>
+    <li id="Nottingham Forest" class="ui-state-default" draggable="false" style="">Nottingham Forest</li>
+    <li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li>
+
+    <li id="AFC Bournemouth" class="ui-state-default" draggable="false" style="">Bournemouth</li>
+
+    <li id="Fulham" class="ui-state-default">Fulham</li>
+
+
+
+
+
+
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+    <li id="West Ham United" class="ui-state-default" draggable="false" style="">West Ham United</li>
+    <li id="Leeds United" class="ui-state-default" draggable="false" style="">Leeds United</li>
+
+
+    <li id="Wolverhampton Wanderers" class="ui-state-default"> Wolverhampton Wanderers</li>
+    <li id="Brentford" class="ui-state-default" draggable="false" style="">Brentford</li>
+    <li id="Sunderland" class="ui-state-default" draggable="false" style="">Sunderland</li>
+    <li id="Burnley" class="ui-state-default" draggable="false" style="">Burnley </li>
+</ol>
+<hr>
+
+
+
+<h3><a name='-9994993'>Mr C Johnson</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Mr C Johnson">
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Arsenal" class="ui-state-default">Arsenal</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+    <li id="Aston Villa" class="ui-state-default">Aston Villa</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default" draggable="false" style="">Brighton &amp; Hove Albion
+    </li>
+    <li id="Nottingham Forest" class="ui-state-default" draggable="false" style="">Nottingham Forest</li>
+    <li id="AFC Bournemouth" class="ui-state-default">Bournemouth</li>
+    <li id="Brentford" class="ui-state-default">Brentford</li>
+    <li id="Leeds United" class="ui-state-default" draggable="false" style="">Leeds United</li>
+
+    <li id="Fulham" class="ui-state-default" draggable="false" style="">Fulham</li>
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+    <li id="Burnley" class="ui-state-default">Burnley </li>
+
+
+    <li id="Everton" class="ui-state-default">Everton</li>
+
+
+
+
+    <li id="Manchester United" class="ui-state-default">Manchester United</li>
+
+
+    <li id="Sunderland" class="ui-state-default">Sunderland</li>
+
+
+    <li id="Wolverhampton Wanderers" class="ui-state-default"> Wolverhampton Wanderers</li>
+    <li id="West Ham United" class="ui-state-default" draggable="false" style="">West Ham United</li>
+</ol>
+<hr>
+
+
+
+<h3><a name='75191'>Kam</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Kam">
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Arsenal" class="ui-state-default">Arsenal</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Aston Villa" class="ui-state-default">Aston Villa</li>
+    <li id="AFC Bournemouth" class="ui-state-default">Bournemouth</li>
+    <li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li>
+    <li id="Brentford" class="ui-state-default">Brentford</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default">Brighton &amp; Hove Albion</li>
+    <li id="Burnley" class="ui-state-default">Burnley </li>
+
+    <li id="Crystal Palace" class="ui-state-default">Crystal Palace </li>
+
+    <li id="Fulham" class="ui-state-default">Fulham</li>
+
+
+
+
+    <li id="Newcastle United" class="ui-state-default">Newcastle United</li>
+    <li id="Nottingham Forest" class="ui-state-default">Nottingham Forest</li>
+
+
+    <li id="West Ham United" class="ui-state-default">West Ham United</li>
+    <li id="Sunderland" class="ui-state-default" draggable="false" style="">Sunderland</li>
+    <li id="Leeds United" class="ui-state-default" draggable="false" style="">Leeds United</li>
+    <li id="Wolverhampton Wanderers" class="ui-state-default"> Wolverhampton Wanderers</li>
+    <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+</ol>
+<hr>
+
+
+
+<h3><a name='642722212'>Roger Coombs</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Roger Coombs">
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Arsenal" class="ui-state-default">Arsenal</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default" draggable="false" style="">Brighton &amp; Hove Albion
+    </li>
+    <li id="AFC Bournemouth" class="ui-state-default">Bournemouth</li>
+    <li id="Aston Villa" class="ui-state-default" draggable="false" style="">Aston Villa</li>
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+    <li id="Nottingham Forest" class="ui-state-default" draggable="false" style="">Nottingham Forest</li>
+    <li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li>
+    <li id="Fulham" class="ui-state-default" draggable="false" style="">Fulham</li>
+    <li id="Leeds United" class="ui-state-default" draggable="false" style="">Leeds United</li>
+    <li id="Brentford" class="ui-state-default">Brentford</li>
+
+    <li id="West Ham United" class="ui-state-default" draggable="false" style="">West Ham United</li>
+
+
+
+
+
+
+
+
+
+
+    <li id="Sunderland" class="ui-state-default">Sunderland</li>
+
+
+    <li id="Wolverhampton Wanderers" class="ui-state-default" draggable="false" style=""> Wolverhampton Wanderers</li>
+    <li id="Burnley" class="ui-state-default" draggable="false" style="">Burnley </li>
+</ol>
+<hr>
+
+
+
+
+<h3><a name='-597820377'>Jon Mason</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Jon Mason">
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Arsenal" class="ui-state-default">Arsenal</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Nottingham Forest" class="ui-state-default" draggable="false" style="">Nottingham Forest</li>
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+    <li id="Aston Villa" class="ui-state-default" draggable="false" style="">Aston Villa</li>
+    <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="AFC Bournemouth" class="ui-state-default">Bournemouth</li>
+    <li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li>
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default" draggable="false" style="">Brighton &amp; Hove Albion
+    </li>
+    <li id="Brentford" class="ui-state-default">Brentford</li>
+
+
+
+
+
+    <li id="Fulham" class="ui-state-default">Fulham</li>
+
+
+
+
+
+
+
+
+    <li id="West Ham United" class="ui-state-default">West Ham United</li>
+    <li id="Sunderland" class="ui-state-default" draggable="false" style="">Sunderland</li>
+    <li id="Leeds United" class="ui-state-default" draggable="false" style="">Leeds United</li>
+    <li id="Wolverhampton Wanderers" class="ui-state-default"> Wolverhampton Wanderers</li>
+    <li id="Burnley" class="ui-state-default" draggable="false" style="">Burnley </li>
+</ol>
+<hr>
+
+
+
+
+<h3><a name='-1015721029'>Gavin Ahern</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Gavin Ahern">
+
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+
+    <li id="Arsenal" class="ui-state-default" draggable="false" style="">Arsenal</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Aston Villa" class="ui-state-default" draggable="false" style="">Aston Villa</li>
+    <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+    <li id="AFC Bournemouth" class="ui-state-default" draggable="false" style="">Bournemouth</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default" draggable="false" style="">Brighton &amp; Hove Albion
+    </li>
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+    <li id="E
+verton" class="ui-state-default" draggable="false" style="">Everton</li>
+    <li id="Fulham" class="ui-state-default" draggable="false" style="">Fulham</li>
+    <li id="Brentford" class="ui-state-default" draggable="false" style="">Brentford</li>
+    <li id="Nottingham Forest" class="ui-state-default" draggable="false" style="">Nottingham Forest</li>
+    <li id="West Ham United" class="ui-state-default" draggable="false" style="">West Ham United</li>
+
+    <li id="Leeds United" class="ui-state-default" draggable="false" style="">Leeds United</li>
+    <li id="Wolverhampton Wanderers" class="ui-state-default" draggable="false" style=""> Wolverhampton Wanderers</li>
+    <li id="Sunderland" class="ui-state-default" draggable="false" style="">Sunderland</li>
+    <li id="Burnley" class="ui-state-default">Burnley </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ol>
+<hr>
+
+
+
+
+<h3><a name='-2003170603'>Nick Wilson</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Nick Wilson">
+    <li id="Arsenal" class="ui-state-default" style="">Arsenal</li>
+
+
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Chelsea" class="ui-state-default" style="" draggable="false">Chelsea</li>
+
+    <li id="Newcastle United" class="ui-state-default" style="" draggable="false">Newcastle United</li>
+    <li id="Aston Villa" class="ui-state-default" style="" draggable="false">Aston Villa</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default" style="" draggable="false">Brighton &amp; Hove Albion
+    </li>
+    <li id="AFC Bournemouth" class="ui-state-default" draggable="false" style="">Bournemouth</li>
+    <li id="Crystal Palace" class="ui-state-default" style="">Crystal Palace </li>
+    <li id="Brentford" class="ui-state-default" style="" draggable="false">Brentford</li>
+    <li id="Everton" class="ui-state-default" style="">Everton</li>
+    <li id="Fulham" class="ui-state-default" style="">Fulham</li>
+    <li id="Leeds United" class="ui-state-default" style="">Leeds United</li>
+
+
+    <li id="Manchester United" class="ui-state-default" style="">Manchester United</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" style="" draggable="false">Tottenham Hotspur</li>
+    <li id="Nottingham Forest" class="ui-state-default" style="">Nottingham Forest</li>
+
+
+    <li id="West Ham United" class="ui-state-default" style="">West Ham United</li>
+    <li id="Burnley" class="ui-state-default" style="" draggable="false">Burnley </li>
+    <li id="Wolverhampton Wanderers" class="ui-state-default" style=""> Wolverhampton Wanderers</li>
+    <li id="Sunderland" class="ui-state-default" draggable="false" style="">Sunderland</li>
+</ol>
+<hr>
+
+
+
+<h3><a name='-1440385243'>Krish Nair</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Krish Nair">
+
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Arsenal" class="ui-state-default" draggable="false" style="">Arsenal</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+    <li id="Aston Villa" class="ui-state-default">Aston Villa</li>
+    <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Nottingham Forest" class="ui-state-default" draggable="false" style="">Nottingham Forest</li>
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default" draggable="false" style="">Brighton &amp; Hove Albion
+    </li>
+    <li id="AFC Bournemouth" class="ui-state-default">Bournemouth</li>
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+    <li id="West Ham United" class="ui-state-default" draggable="false" style="">West Ham United</li>
+    <li id="Brentford" class="ui-state-default">Brentford</li>
+
+
+
+
+    <li id="Fulham" class="ui-state-default" draggable="false" style="">Fulham</li>
+    <li id="Burnley" class="ui-state-default" draggable="false" style="">Burnley </li>
+    <li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li>
+    <li id="Wolverhampton Wanderers" class="ui-state-default" draggable="false" style=""> Wolverhampton Wanderers</li>
+    <li id="Leeds United" class="ui-state-default">Leeds United</li>
+
+
+
+
+
+    <li id="Sunderland" class="ui-state-default">Sunderland</li>
+
+
+
+</ol>
+<hr>
+
+<h3><a name='149943079'>Kev Kirby</a></h3>
+
+<h4>Finishing Positions</h4>:
+<ol class="ui-sortable" id="Kev Kirby">
+
+    <li id="Liverpool" class="ui-state-default" draggable="false" style="">Liverpool</li>
+    <li id="Arsenal" class="ui-state-default" draggable="false" style="">Arsenal</li>
+    <li id="Chelsea" class="ui-state-default" draggable="false" style="">Chelsea</li>
+    <li id="Manchester City" class="ui-state-default" draggable="false" style="">Manchester City</li>
+    <li id="Tottenham Hotspur" class="ui-state-default" draggable="false" style="">Tottenham Hotspur</li>
+    <li id="Newcastle United" class="ui-state-default" draggable="false" style="">Newcastle United</li>
+    <li id="Everton" class="ui-state-default" draggable="false" style="">Everton</li>
+    <li id="AFC Bournemouth" class="ui-state-default" draggable="false" style="">Bournemouth</li>
+    <li id="Manchester United" class="ui-state-default" draggable="false" style="">Manchester United</li>
+    <li id="Aston Villa" class="ui-state-default" draggable="false" style="">Aston Villa</li>
+
+    <li id="Brighton &amp; Hove Albion" class="ui-state-default" draggable="false" style="">Brighton &amp; Hove Albion
+    </li>
+    <li id="Nottingham Forest" class="ui-state-default" draggable="false" style="">Nottingham Forest</li>
+    <li id="Crystal Palace" class="ui-state-default" draggable="false" style="">Crystal Palace </li>
+    <li id="Brentford" class="ui-state-default">Brentford</li>
+
+
+
+
+
+
+
+
+
+
+
+    <li id="Fulham" class="ui-state-default" draggable="false" style="">Fulham</li>
+
+
+    <li id="West Ham United" class="ui-state-default">West Ham United</li>
+    <li id="Leeds United" class="ui-state-default" draggable="false" style="">Leeds United</li>
+    <li id="Sunderland" class="ui-state-default" draggable="false" style="">Sunderland</li>
+    <li id="Wolverhampton Wanderers" class="ui-state-default"> Wolverhampton Wanderers</li>
+    <li id="Burnley" class="ui-state-default" draggable="false" style="">Burnley </li>
+</ol>
+<hr>
+
+
+</body>
+</html>
+
