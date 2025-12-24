@@ -7,9 +7,9 @@
 
 (function() {
     // CONFIG: set this to your proxy endpoint (server-side) that adds the RapidAPI headers.
-    // Example: "https://football-proxy.vercel.app/api/league-table.json"
+    // Example: "/api/league-table.json" for relative path
     // The proxy must call RapidAPI server-side and return JSON.
-    var PROXY_URL = "https://premiership-predictions.pages.dev/api/league-table.json"; 
+    var PROXY_URL = "/api/league-table.json"; 
 
     var lowest = 10000;
     var lowestName = "";
