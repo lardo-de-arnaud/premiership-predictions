@@ -28,14 +28,15 @@ export default {
       console.log("Response.ok:", response.ok);
       console.log("Response headers:", JSON.stringify(Array.from(response.headers.entries())));
 
+      const responseText = await response.text();
+      console.log("Response body length:", responseText.length);
+      console.log("Response body (first 1000 chars):", responseText.substring(0, 1000));
+      console.log("Full response body:", responseText);
+
       if (!response.ok) {
         console.error(`HTTP error! status: ${response.status}`);
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-
-      const responseText = await response.text();
-      console.log("Response body length:", responseText.length);
-      console.log("Response body (first 500 chars):", responseText.substring(0, 500));
       console.log("=== PROXY LOG END ===");
 
       // return response with CORS headers so your static site can read it
