@@ -13,8 +13,12 @@ export default {
       }
     });
 
+    console.log("Response status:", resp.status);
+    const responseText = await resp.text();
+    console.log("Response body:", responseText);
+
     // return response with CORS headers so your static site can read it
-    return new Response(await resp.text(), {
+    return new Response(responseText, {
       status: resp.status,
       headers: {
         "Content-Type": "application/json",
