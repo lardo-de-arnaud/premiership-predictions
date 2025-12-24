@@ -5,8 +5,8 @@ compatibility_date = "2025-01-01"
 [env.production]
 routes = [
   {
-    pattern = "premiership-predictions.pages.dev/api/*",
-    custom_domain = true
+    pattern = "*/api/*",
+    zone_name = "pages.dev"
   }
 ]
 
