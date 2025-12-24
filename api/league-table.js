@@ -1,9 +1,10 @@
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-    // adjust path if needed (keeps query string, e.g. ?comp=1)
-    console.log("Fetching from target URL: " + `https://football-web-pages1.p.rapidapi.com${url.pathname}${url.search}`);
-    const target = `https://football-web-pages1.p.rapidapi.com${url.pathname}${url.search}`;
+    // Strip /api prefix to get the actual endpoint path
+    const apiPath = url.pathname.replace(/^\/api/, '');
+    console.log("Fetching from target URL: " + `https://football-web-pages1.p.rapidapi.com${apiPath}${url.search}`);
+    const target = `https://football-web-pages1.p.rapidapi.com${apiPath}${url.search}`;
 
     const resp = await fetch(target, {
       headers: {
