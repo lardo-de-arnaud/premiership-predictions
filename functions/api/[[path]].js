@@ -19,8 +19,6 @@ export async function onRequest({ request, env }) {
 
   console.log('=== PROXY LOG START ===');
   console.log('Request URL:', request.url);
-  console.log('Parsed pathname:', url.pathname);
-  console.log('API path (after stripping /api):', apiPath);
   console.log('Search params:', url.search);
   console.log('Fetching from target URL:', `${BASE_URL}${apiPath}${url.search}`);
 

@@ -71,20 +71,14 @@
 
             console.log("Data received from proxy:", data);
             
-            // New API structure: data.standings[0].table
-            if (data && data.standings && Array.isArray(data.standings) && 
-                data.standings[0] && Array.isArray(data.standings[0].table)) {
-                console.log("=== STANDINGS TABLE ===");
-                var table = data.standings[0].table;
-                table.forEach(function(entry, index) {
-                    console.log("Position " + index + ": " + entry.team.shortName);
-                });
-                console.log("=== END STANDINGS TABLE ===");
-                
+            // expected structure: data['league-table'].teams (as before)
+            if (data && data['league-table'] && Array.isArray(data['league-table'].teams)) {
+                console.log("League table data found, processing teams");
                 var i = 0;
                 var ol = $("<ol id='table'>");
-                $.each(table, function(key, entry) {
-                    var teamName = entry.team.shortName;
+                $.each(data['league-table'].teams, function(key, team) {
+                    // guard against missing name
+                    var teamName = team && team.name ? team.name : ("team-" + i);
                     position[teamName] = i++;
                     ol.append("<li id='" + escapeHtmlAttr(teamName) + "'>" + escapeHtml(teamName) + "</li>");
                 });
