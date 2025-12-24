@@ -30,7 +30,7 @@ export async function onRequest({ request, env }) {
     console.log('Making fetch request to:', target);
     const response = await fetch(target, {
       headers: {
-        'FWP-API-Key': env.RAPIDAPI_KEY,
+        'FWP-API-Key': env.API_KEY,
         'Accept': 'application/json'
       }
     });

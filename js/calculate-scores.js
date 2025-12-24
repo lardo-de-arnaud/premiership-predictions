@@ -1,14 +1,7 @@
-/*
-  calculate-scores.js
-  Rewritten client-side code. This file **does NOT** contain an API key.
-  You MUST configure PROXY_URL to point at a server-side proxy (Vercel/Netlify/Cloudflare Worker, etc.)
-  which performs the RapidAPI request and returns JSON with CORS headers. See README.md for instructions.
-*/
+
 
 (function() {
-    // CONFIG: set this to your proxy endpoint (server-side) that adds the RapidAPI headers.
-    // Example: "/api/league-table.json" for relative path
-    // The proxy must call RapidAPI server-side and return JSON.
+
     var PROXY_URL = "/api/league-table.json"; 
 
     var lowest = 10000;
@@ -35,8 +28,8 @@
     }
 
     $(document).ready(function() {
-        if (!PROXY_URL || PROXY_URL.indexOf("<your-proxy-host>") !== -1) {
-            console.error("PROXY_URL not set. Please set PROXY_URL to your proxy endpoint that forwards the request to RapidAPI.");
+        if (!PROXY_URL || PROXY_URL.trim() === ""  ) {
+            console.error("PROXY_URL not set.");
             $("#current-table").append("<p style='display:inline-block; border:2px solid red; padding:10px; background-color:#ffecec; color:#900; border-radius:4px;'><b>Error:</b> PROXY_URL not configured. Tell Adam to get his finger out and fix it!</p>");
             return;
         }
