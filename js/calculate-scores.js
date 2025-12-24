@@ -40,7 +40,7 @@
             $("#current-table").append("<p style='display:inline-block; border:2px solid red; padding:10px; background-color:#ffecec; color:#900; border-radius:4px;'><b>Error:</b> PROXY_URL not configured. Tell Adam to get his finger out and fix it!</p>");
             return;
         }
-
+console.log("Yew Ahh Ell "+PROXY_URL + "?comp=1");
         // Use fetch to call the proxy. Proxy must not require special client headers.
         fetch(PROXY_URL + "?comp=1", {
             method: "GET",
