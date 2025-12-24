@@ -105,6 +105,8 @@
                     if (typeof position[team] !== "number") {
                         // team not found in the official table — log it and skip
                         console.warn("Team not found in official table:", team);
+                        // show error at top of page
+                        $("body").prepend("<p style='border:2px solid red; padding:8px; background:#ffecec; color:#900; border-radius:4px;'><b>" + escapeHtml(team) + " has the wrong ID</b></p>");
                     } else {
                         console.log("Team " + team + ": official position " + position[team] + ", user position " + pos);
                         score += Math.abs(pos - position[team]);
