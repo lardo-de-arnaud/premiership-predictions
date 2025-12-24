@@ -53,6 +53,7 @@ console.log("Yew Ahh Ell "+PROXY_URL + "?comp=1");
             if (!resp.ok) {
                 throw new Error("Proxy returned status " + resp.status + ": " + resp.statusText);
             }
+            console.log("TEXT" + resp.statusText);
             console.log(resp.json());
             return resp.json();
         })
