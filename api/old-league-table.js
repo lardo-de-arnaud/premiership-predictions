@@ -3,12 +3,13 @@ export default {
     const url = new URL(request.url);
     // Strip /api prefix to get the actual endpoint path
     const apiPath = url.pathname.replace(/^\/api/, '');
-    console.log("Fetching from target URL: " + `https://api.footballwebpages.co.uk/v2/; ${apiPath}${url.search}`);
-    const target = `https://api.footballwebpages.co.uk/v2/; {apiPath}${url.search}`;
+    console.log("Fetching from target URL: " + `https://football-web-pages1.p.rapidapi.com${apiPath}${url.search}`);
+    const target = `https://football-web-pages1.p.rapidapi.com${apiPath}${url.search}`;
 
     const resp = await fetch(target, {
       headers: {
-        "FWP-API-Key": env.RAPIDAPI_KEY,
+        "X-RapidAPI-Key": env.RAPIDAPI_KEY,
+        "X-RapidAPI-Host": "football-web-pages1.p.rapidapi.com",
         "Accept": "application/json"
       }
     });
