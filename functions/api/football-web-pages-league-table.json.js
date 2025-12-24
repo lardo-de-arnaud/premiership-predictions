@@ -15,7 +15,7 @@ export async function onRequest({ request, env }) {
   // Strip /api prefix to get the actual endpoint path
   const apiPath = url.pathname.replace(/^\/api/, '');
 
-  const BASE_URL = 'https://api.football-data.org';
+  const BASE_URL = 'https://api.footballwebpages.co.uk/v2';
 
   console.log('=== PROXY LOG START ===');
   console.log('Request URL:', request.url);
@@ -30,7 +30,7 @@ export async function onRequest({ request, env }) {
     console.log('Making fetch request to:', target);
     const response = await fetch(target, {
       headers: {
-        'X-Auth-Token': env.API_KEY,
+        'FWP-API-Key': env.API_KEY,
         'Accept': 'application/json'
       }
     });

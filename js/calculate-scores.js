@@ -2,7 +2,8 @@
 
 (function() {
 
-    var PROXY_URL = "/api/league-table.json"; 
+    // Proxy base; the function strips the /api prefix and forwards to football-data.org
+    var PROXY_URL = "/api"; 
 
     var lowest = 10000;
     var lowestName = "";
@@ -30,15 +31,14 @@
     $(document).ready(function() {
         if (!PROXY_URL || PROXY_URL.trim() === ""  ) {
             console.error("PROXY_URL not set.");
-            $("#current-table").append("<p style='display:inline-block; border:2px solid red; padding:10px; background-color:#ffecec; color:#900; border-radius:4px;'><b>Error:</b> PROXY_URL not configured. Tell Adam to get his finger out and fix it!</p>");
             return;
         }
-console.log("Yew Ahh Ell "+PROXY_URL + "?comp=1");
+
         // Use fetch to call the proxy. Proxy must not require special client headers.
         console.log("=== CLIENT LOG START ===");
-        console.log("Calling proxy URL:", PROXY_URL + "?comp=1");
+        console.log("Calling proxy URL:", PROXY_URL + "/v4/competitions/PL/standings");
         
-        fetch(PROXY_URL + "?comp=1", {
+        fetch(PROXY_URL + "/v4/competitions/PL/standings", {
             method: "GET",
             headers: {
                 "Accept": "application/json"

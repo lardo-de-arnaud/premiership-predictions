@@ -3,7 +3,16 @@ compatibility_date = "2025-01-01"
 pages_build_output_dir = "."
 
 [env.production]
-vars = { API_KEY = "6885d2b0afmshf350fdf2ca5a6cbp15cfafjsn3681a13d3b3d" }
+# football-web-pages - key doesnt seem to work any more
+# vars = { API_KEY = "6885d2b0afmshf350fdf2ca5a6cbp15cfafjsn3681a13d3b3d" }
+
+# football-data.org
+vars = { API_KEY = "d6e92c8f3c464aa4bb9f03f3d7164ca5" }
 
 [env.preview]
-vars = { API_KEY = "6885d2b0afmshf350fdf2ca5a6cbp15cfafjsn3681a13d3b3d" }
+# football-web-pages - key doesnt seem to work any more
+# vars = { API_KEY = "6885d2b0afmshf350fdf2ca5a6cbp15cfafjsn3681a13d3b3d" }
+
+# football-data.org
+vars = { API_KEY = "d6e92c8f3c464aa4bb9f03f3d7164ca5" }
+
