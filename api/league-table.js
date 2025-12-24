@@ -6,32 +6,58 @@ export default {
 
     const BASE_URL = 'https://api.footballwebpages.co.uk/v2';
 
-    console.log("Fetching from target URL: " + `${BASE_URL}${apiPath}${url.search}`);
+    console.log("=== PROXY LOG START ===");
+    console.log("Request URL:", request.url);
+    console.log("Parsed pathname:", url.pathname);
+    console.log("API path (after stripping /api):", apiPath);
+    console.log("Search params:", url.search);
+    console.log("Fetching from target URL:", `${BASE_URL}${apiPath}${url.search}`);
 
     const target = `${BASE_URL}${apiPath}${url.search}`;
 
-    const response = await fetch(target, {
-      headers: {
-        "FWP-API-Key": env.RAPIDAPI_KEY,
-        "Accept": "application/json"
-      }
-    });
+    try {
+      console.log("Making fetch request to:", target);
+      const response = await fetch(target, {
+        headers: {
+          "FWP-API-Key": env.RAPIDAPI_KEY,
+          "Accept": "application/json"
+        }
+      });
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+      console.log("Response received - Status:", response.status);
+      console.log("Response.ok:", response.ok);
+      console.log("Response headers:", JSON.stringify(Array.from(response.headers.entries())));
+
+      if (!response.ok) {
+        console.error(`HTTP error! status: ${response.status}`);
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const responseText = await response.text();
+      console.log("Response body length:", responseText.length);
+      console.log("Response body (first 500 chars):", responseText.substring(0, 500));
+      console.log("=== PROXY LOG END ===");
+
+      // return response with CORS headers so your static site can read it
+      return new Response(responseText, {
+        status: response.status,
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "https://premiership-predictions.pages.dev",
+          "Access-Control-Allow-Methods": "GET, OPTIONS"
+        }
+      });
+    } catch (error) {
+      console.error("Proxy error:", error.message);
+      console.error("Stack:", error.stack);
+      console.log("=== PROXY LOG END (WITH ERROR) ===");
+      return new Response(JSON.stringify({ error: error.message }), {
+        status: 500,
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "https://premiership-predictions.pages.dev"
+        }
+      });
     }
-
-    const responseText = await response.text();
-    console.log("Response body:", responseText);
-
-    // return response with CORS headers so your static site can read it
-    return new Response(responseText, {
-      status: response.status,
-      headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "https://premiership-predictions.pages.dev", // your site
-        "Access-Control-Allow-Methods": "GET, OPTIONS"
-      }
-    });
   }
 };

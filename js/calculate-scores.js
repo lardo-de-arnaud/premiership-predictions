@@ -42,6 +42,9 @@
         }
 console.log("Yew Ahh Ell "+PROXY_URL + "?comp=1");
         // Use fetch to call the proxy. Proxy must not require special client headers.
+        console.log("=== CLIENT LOG START ===");
+        console.log("Calling proxy URL:", PROXY_URL + "?comp=1");
+        
         fetch(PROXY_URL + "?comp=1", {
             method: "GET",
             headers: {
@@ -50,16 +53,29 @@ console.log("Yew Ahh Ell "+PROXY_URL + "?comp=1");
             credentials: "omit"
         })
         .then(function(resp) {
+            console.log("Response received from proxy");
+            console.log("resp.status:", resp.status);
+            console.log("resp.statusText:", resp.statusText);
+            console.log("resp.ok:", resp.ok);
+            console.log("resp.headers Content-Type:", resp.headers.get("content-type"));
+            
             if (!resp.ok) {
+                console.error("Response not ok! Throwing error");
                 throw new Error("Proxy returned status " + resp.status + ": " + resp.statusText);
             }
-            console.log("TEXT" + resp.statusText);
-            console.log(resp.json());
-            return resp.json();
+            
+            console.log("Response is ok, parsing JSON");
+            const jsonPromise = resp.json();
+            console.log("JSON promise created:", jsonPromise);
+            return jsonPromise;
         })
         .then(function(data) {
+            console.log("=== CLIENT LOG END (SUCCESS) ===");
+            console.log("Data received from proxy:", data);
+            
             // expected structure: data['league-table'].teams (as before)
             if (data && data['league-table'] && Array.isArray(data['league-table'].teams)) {
+                console.log("League table data found, processing teams");
                 var i = 0;
                 var ol = $("<ol id='table'>");
                 $.each(data['league-table'].teams, function(key, team) {
@@ -70,6 +86,7 @@ console.log("Yew Ahh Ell "+PROXY_URL + "?comp=1");
                 });
                 $("#current-table").empty().append(ol);
             } else {
+                console.error("Unexpected data structure:", data);
                 $("#current-table").append("<p>Current table not available.</p>");
                 return;
             }
