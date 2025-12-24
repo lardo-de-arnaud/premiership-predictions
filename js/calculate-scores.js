@@ -106,6 +106,7 @@
                         // team not found in the official table — log it and skip
                         console.warn("Team not found in official table:", team);
                     } else {
+                        console.log("Team " + team + ": official position " + position[team] + ", user position " + pos);
                         score += Math.abs(pos - position[team]);
                     }
                     pos++;
