@@ -1,6 +1,7 @@
 name = "premiership-predictions"
 main = "api/league-table.js"
 compatibility_date = "2025-01-01"
+pages_build_output_dir = "."
 
 [env.production]
 vars = { RAPIDAPI_KEY = "6885d2b0afmshf350fdf2ca5a6cbp15cfafjsn3681a13d3b3d" }
