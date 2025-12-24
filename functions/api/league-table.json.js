@@ -15,8 +15,7 @@ export async function onRequest({ request, env }) {
   // Strip /api prefix to get the actual endpoint path
   const apiPath = url.pathname.replace(/^\/api/, '');
 
-  // Use RapidAPI host; the direct FWP API expects a different key header
-  const BASE_URL = 'https://football-web-pages.p.rapidapi.com/v2';
+  const BASE_URL = 'https://api.footballwebpages.co.uk/v2';
 
   console.log('=== PROXY LOG START ===');
   console.log('Request URL:', request.url);
@@ -31,8 +30,7 @@ export async function onRequest({ request, env }) {
     console.log('Making fetch request to:', target);
     const response = await fetch(target, {
       headers: {
-        'X-RapidAPI-Key': env.RAPIDAPI_KEY,
-        'X-RapidAPI-Host': 'football-web-pages.p.rapidapi.com',
+        'FWP-API-Key': env.RAPIDAPI_KEY,
         'Accept': 'application/json'
       }
     });
