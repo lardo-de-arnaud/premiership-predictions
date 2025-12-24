@@ -53,6 +53,7 @@
             if (!resp.ok) {
                 throw new Error("Proxy returned status " + resp.status + ": " + resp.statusText);
             }
+            console.log(resp.json());
             return resp.json();
         })
         .then(function(data) {
