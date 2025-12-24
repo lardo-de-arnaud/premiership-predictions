@@ -65,9 +65,21 @@ console.log("Yew Ahh Ell "+PROXY_URL + "?comp=1");
             }
             
             console.log("Response is ok, parsing JSON");
-            const jsonPromise = resp.json();
-            console.log("JSON promise created:", jsonPromise);
-            return jsonPromise;
+            // First, get the response as text to log it
+            return resp.text().then(function(text) {
+                console.log("Raw response body:", text);
+                console.log("Raw response body length:", text.length);
+                // Now try to parse it as JSON
+                try {
+                    const jsonData = JSON.parse(text);
+                    console.log("JSON parsed successfully");
+                    return jsonData;
+                } catch (e) {
+                    console.error("Failed to parse JSON:", e.message);
+                    console.error("First 500 chars of response:", text.substring(0, 500));
+                    throw new Error("Response is not valid JSON: " + e.message);
+                }
+            });
         })
         .then(function(data) {
             console.log("=== CLIENT LOG END (SUCCESS) ===");
