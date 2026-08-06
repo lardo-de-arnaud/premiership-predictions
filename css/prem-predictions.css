@@ -1,0 +1,51 @@
+.sr-only {
+  position: absolute;
+  top: -900000px;
+}
+body {
+  font-family: arial;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+#send {
+  background-color: lightgrey;
+}
+
+#Name {
+  border: 2px solid red;
+  height: 2.5em;
+}
+
+select {
+  margin-left: 20px;
+  width: 80%;
+  font-size: 1em;
+  border: 2px solid grey;
+  border-radius: 0;
+  font-weight: 400;
+  color: inherit;
+  padding: 11px 15px;
+  line-height: normal;
+  transition: border-color 0.2s ease, outline 0.2s ease;
+}
+
+#newsortable {
+  margin: 20px;
+  padding: 3;
+  width: 80%;
+  border: 20px;
+}
+
+#newsortable li {
+  cursor: grab;
+  box-shadow: 1px 2px #888888;
+  border: 2px solid grey;
+  margin: 20px;
+  padding: 10px;
+}
+
+#newsortable li span {
+  position: absolute;
+  margin-left: -1.3em;
+}
