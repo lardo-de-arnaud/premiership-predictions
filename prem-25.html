@@ -11,6 +11,7 @@
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.min.js"></script>
 <script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/prem-predictions.js"></script>
 
 <link rel="icon"
       type="image/jpg"
@@ -74,24 +75,6 @@ select {
 }
 
 </style>
-<script>
-                        $(function() {
-                                $("#newsortable").sortable();
-                                $("#newsortable").disableSelection();
-                        });
-                        function hashCode(str) {
-                                var hash = 0;
-                                if (str.length == 0)
-                                        return hash;
-                                for ( i = 0; i < str.length; i++) {
-                                        char = str.charCodeAt(i);
-                                        hash = ((hash << 5) - hash) + char;
-                                        hash = hash & hash;
-                                        // Convert to 32bit integer
-                                }
-                                return hash;
-                        }
-                </script>
 </head>
 <body>
         <!--body onLoad="blinker();"-->
@@ -137,12 +120,6 @@ from the outside.
                         value="adam.marshall@it.ox.ac.uk" /> <input type="hidden"
                         name="email" value="adam.marshall@it.ox.ac.uk" />
 
-                <script>
-                                function enable() {
-                                        $('#send').removeAttr('disabled');
-                                };
-
-                        </script>
 
                 Your name: <input id='Name' size='20' onKeyUp="enable()" type='text'
                         name='Name' /> <br />
@@ -178,26 +155,6 @@ from the outside.
 
                 <input type="hidden" name="<h4>Finishing Positions</h4>" id="raw" />
 
-                <script type="text/javascript">
-                                function doSubmit() {
-                                        var name = $("#Name").val().trim();
-                                        name = name.replace(/"/g, "_");
-                                        name = name.replace(/'/g, "_");
-                                        name = name.replace(/>/g, "_");
-                                        name = name.replace(/</g, "_");
-                                        name = name.replace(/&/g, "_");
-
-                                        $("ol").attr("id", name);
-                                        $("#Name").val("<h3><a name='" + hashCode(name) + "'>" + name + "</a></h3>");
-
-                                        var mylist = document.getElementById('<h3>Finishing Positions</h3>');
-                                        var raw = document.getElementById('raw');
-                                        raw.value = mylist.innerHTML;
-                                        document.forms[0].submit();
-                                }
-                        </script>
-
-
                 <div id="blink">
                         <b>Do not forget to add your name</b>
                 </div>
@@ -207,14 +164,6 @@ from the outside.
                         <input disabled="disabled" id="send" type="Button" value="Submit"
                                 onClick="doSubmit()" />
         </form>
-        <script src="Sortable.js"></script>
-
-        <script type="text/javascript">
-                new Sortable(document.getElementById('newsortable'), {
-                animation: 150,
-                ghostClass: 'blue-background-class'
-        });
-</script>
 </body>
 </html>
 
