@@ -1,90 +1,757 @@
-<! -- TO DO
+<! -- TO DO 1/ mouse pointer to a plus when moving items 2/ 'entries' has problems with id attribute splitting across
+  lines 4/ Get team names from JSON -->
+  <html>
 
-1/ mouse pointer to a plus when moving items
-2/ 'entries' has problems with id attribute splitting across lines
-4/ Get team names from JSON
+  <head>
+    <title>Premiership Predictions 2026-27</title>
+    <script src="//code.jquery.com/jquery-3.0.0.js"></script>
+    <script src="js/calculate-scores.js"></script>
+    <style>
+      body {
+        font-family: arial;
+      }
 
--->
-<html>
- <head>
-  <title>Premiership Predictions 2026-27</title>
-<script src="//code.jquery.com/jquery-3.0.0.js"></script>
-<script src="js/calculate-scores.js"></script>
-  <style>
-   body { font-family: arial; }
-   table {border: none;}
+      table {
+        border: none;
+      }
 
-    #sortable li { margin: 3px 3px 3px 3px; padding: 3px 3px 3px 3px;  }
-    #sortable li span { position: absolute; margin-left: -1.3em; }
+      #sortable li {
+        margin: 3px 3px 3px 3px;
+        padding: 3px 3px 3px 3px;
+      }
 
-  </style>
+      #sortable li span {
+        position: absolute;
+        margin-left: -1.3em;
+      }
+    </style>
+    <link rel="icon" type="image/jpg" href="images/cat-in-a-fez-small.jpg ">
+  </head>
 
-<link rel="icon" 
-      type="image/jpg" 
-      href="images/cat-in-a-fez-small.jpg ">
+  <body>
+    <img src="images/alonso.png" width="270">
+    <h1> Premiership Predictions 2026-27 - Current Standings </h1>
+    <p>Reminder: Your score is the sum of the differences between your prediction and the actual finishing position.
+    </p>
+    <h2>Premier League Table</h2>
 
- </head>
-<body>
+    <!-- final table goes here -->
 
-<img src="images/alonso.png" width="270">
+    <div id="current-table"></div>
 
-<h1> Premiership Predictions 2026-27 - Current Standings </h1>
+    <!-- pasted in ^^^^^ uncommet above for next year-->
+    <!-- PASTE IN FINAL STANDINGS AT END & COMMENT OUT div ABOVE -->
+    <!-- end of pasted in -->
+     
+    <h2> Final Standings</h2>
 
-<p>Reminder:  Your score is the sum of the differences between your prediction and the actual finishing position.
-</p>
+    <div id="current-scores"></div>
+    
+    <!-- pasted in ^^^^^ uncommet above for next year-->
+    <!-- PASTE IN FINAL pREDICTIONS SCORES AT END & COMMENT OUT div ABOVE -->
+    <!-- end of pasted in -->
 
-<h2>Premier League Table</h2>
-<!-- final table goes here -->
-<div id="current-table"></div>
+    <h3>Table From Last Year</h3>
+    <ol id="table">
+      <li>Arsenal</li>
+      <li>Man City</li>
+      <li>Man United</li>
+      <li>Aston Villa</li>
+      <li>Liverpool</li>
+      <li>Bournemouth</li>
+      <li>Sunderland</li>
+      <li>Brighton Hove</li>
+      <li>Brentford</li>
+      <li>Chelsea</li>
+      <li>Fulham</li>
+      <li>Newcastle</li>
+      <li>Everton</li>
+      <li>Leeds United</li>
+      <li>Crystal Palace</li>
+      <li>Nottingham</li>
+      <li>Tottenham</li>
+      <li>West Ham</li>
+      <li>Burnley</li>
+      <li>Wolverhampton</li>
+    </ol>
+    <h2>Entries</h2>
+    <!-- entries here -->
+    <h3><a name='1435813827'>chat GPT</a></h3>
+    <h4>Finishing Positions</h4>:
+    <ol class="ui-sortable" id="chat GPT">
+      <li id="Arsenal" class="ui-state-default ui-sortable-handle">Arsenal</li>
+      <li id="Man City" class="ui-state-default ui-sortable-handle" style="">Manchester City</li>
+      <li id="Liverpool" class="ui-state-default ui-sortable-handle" style="">Liverpool</li>
+      <li id="Chelsea" class="ui-state-default ui-sortable-handle" style="">Chelsea</li>
+      <li id="Man United" class="ui-state-default ui-sortable-handle" style="">Manchester United</li>
+      <li id="Aston Villa" class="ui-state-default ui-sortable-handle">Aston Villa</li>
+      <li id="Newcastle" class="ui-state-default ui-sortable-handle" style="">Newcastle United</li>
+      <li id="Tottenham" class="ui-state-default ui-sortable-handle" style="">Tottenham Hotspur</li>
+      <li id="Brighton Hove" class="ui-state-default ui-sortable-handle" style="">Brighton and Hove Albion</li>
+      <li id="Bournemouth" class="ui-state-default ui-sortable-handle">Bournemouth</li>
+      <li id="Brentford" class="ui-state-default ui-sortable-handle">Brentford</li>
+      <li id="Crystal Palace" class="ui-state-default ui-sortable-handle" style="">Crystal Palace </li>
+      <li id="Nottingham" class="ui-state-default ui-sortable-handle" style="">Nottingham Forest</li>
+      <li id="Everton" class="ui-state-default ui-sortable-handle" style="">Everton</li>
+      <li id="Fulham" class="ui-state-default ui-sortable-handle" style="">Fulham</li>
+      <li id="Leeds United" class="ui-state-default ui-sortable-handle" style="">Leeds United</li>
+      <li id="Sunderland" class="ui-state-default ui-sortable-handle" style="">Sunderland</li>
+      <li id="Coventry" class="ui-state-default ui-sortable-handle">Coventry City</li>
+      <li id="Ipswich" class="ui-state-default ui-sortable-handle"> Ipswich Town</li>
+      <li id="Hull" class="ui-state-default ui-sortable-handle" style="">Hull City </li>
+    </ol>
+    <hr>
+    <h3><a name='74656'>Joe</a></h3>
+    <h4>Finishing Positions</h4>:
+    <ol class="ui-sortable" id="Joe">
+      <li id="Arsenal" class="ui-state-default ui-sortable-handle">Arsenal</li>
+      <li id="Liverpool" class="ui-state-default ui-sortable-handle" style="">Liverpool</li>
+      <li id="Man City" class="ui-state-default ui-sortable-handle" style="">Manchester City</li>
+      <li id="Man United" class="ui-state-default ui-sortable-handle" style="">Manchester United</li>
+      <li id="Chelsea" class="ui-state-default ui-sortable-handle" style="">Chelsea</li>
+      <li id="Aston Villa" class="ui-state-default ui-sortable-handle" style="">Aston Villa</li>
+      <li id="Fulham" class="ui-state-default ui-sortable-handle" style="">Fulham</li>
+      <li id="Bournemouth" class="ui-state-default ui-sortable-handle" style="">Bournemouth</li>
+      <li id="Brighton Hove" class="ui-state-default ui-sortable-handle" style="">Brighton and Hove Albion</li>
+      <li id="Sunderland" class="ui-state-default ui-sortable-handle" style="">Sunderland</li>
+      <li id="Tottenham" class="ui-state-default ui-sortable-handle" style="">Tottenham Hotspur</li>
+      <li id="Brentford" class="ui-state-default ui-sortable-handle" style="">Brentford</li>
+      <li id="Crystal Palace" class="ui-state-default ui-sortable-handle" style="">Crystal Palace </li>
+      <li id="Newcastle" class="ui-state-default ui-sortable-handle" style="">Newcastle United</li>
+      <li id="Leeds United" class="ui-state-default ui-sortable-handle" style="">Leeds United</li>
+      <li id="Everton" class="ui-state-default ui-sortable-handle" style="">Everton</li>
+      <li id="Nottingham" class="ui-state-default ui-sortable-handle" style="">Nottingham Forest</li>
+      <li id="Ipswich" class="ui-state-default ui-sortable-handle" style=""> Ipswich Town</li>
+      <li id="Coventry" class="ui-state-default ui-sortable-handle" style="">Coventry City</li>
+      <li id="Hull" class="ui-state-default ui-sortable-handle" style="">Hull City </li>
+    </ol>
+    <hr>
+    <h3><a name='-1015721029'>Gavin Ahern</a></h3>
+    <h4>Finishing Positions</h4>:
+    <ol class="ui-sortable" id="Gavin Ahern">
+      <li id="Arsenal" class="ui-state-default ui-sortable-handle">Arsenal</li>
+      <li id="Man City" class="ui-state-default ui-sortable-handle" style="">Manchester City</li>
+      <li id="Liverpool" class="ui-state-default ui-sortable-handle" style="">Liverpool</li>
+      <li id="Man United" class="ui-state-default ui-sortable-handle" style="">Manchester United</li>
+      <li id="Chelsea" class="ui-state-default ui-sortable-handle" style="">Chelsea</li>
+      <li id="Tottenham" class="ui-state-default ui-sortable-handle" style="">Tottenham Hotspur</li>
+      <li id="Aston Villa" class="ui-state-default ui-sortable-handle" style="">Aston Villa</li>
+      <li id="Brighton Hove" class="ui-state-default ui-sortable-handle" style="">Brighton and Hove Albion</li>
+      <li id="Brentford" class="ui-state-default ui-sortable-handle">Brentford</li>
+      <li id="Bournemouth" class="ui-state-default ui-sortable-handle" style="">Bournemouth</li>
+      <li id="Everton" class="ui-state-default ui-sortable-handle">Everton</li>
+      <li id="Fulham" class="ui-state-default ui-sortable-handle">Fulham</li>
+      <li id="Sunderland" class="ui-state-default ui-sortable-handle" style="">Sunderland</li>
+      <li id="Newcastle" class="ui-state-default ui-sortable-handle">Newcastle United</li>
+      <li id="Crystal Palace" class="ui-state-default ui-sortable-handle" style="">Crystal Palace </li>
+      <li id="Leeds United" class="ui-state-default ui-sortable-handle" style="">Leeds United</li>
+      <li id="Nottingham" class="ui-state-default ui-sortable-handle" style="">Nottingham Forest</li>
+      <li id="Coventry" class="ui-state-default ui-sortable-handle" style="">Coventry City</li>
+      <li id="Ipswich" class="ui-state-default ui-sortable-handle" style=""> Ipswich Town</li>
+      <li id="Hull" class="ui-state-default ui-sortable-handle" style="">Hull City </li>
+    </ol>
+    <hr>
+    <h3><a name='74104971'>Maidz</a></h3>
+    <h4>Finishing Positions</h4>:
+    <ol class="ui-sortable" id="Maidz">
+      <li id="Arsenal" class="ui-state-default ui-sortable-handle">Arsenal</li>
+      <li id="Man City" class="ui-state-default ui-sortable-handle" style="">Manchester City</li>
+      <li id="Man United" class="ui-state-default ui-sortable-handle" style="">Manchester United</li>
+      <li id="Liverpool" class="ui-state-default ui-sortable-handle" style="">Liverpool</li>
+      <li id="Chelsea" class="ui-state-default ui-sortable-handle" style="">Chelsea</li>
+      <li id="Tottenham" class="ui-state-default ui-sortable-handle" style="">Tottenham Hotspur</li>
+      <li id="Aston Villa" class="ui-state-default ui-sortable-handle">Aston Villa</li>
+      <li id="Nottingham" class="ui-state-default ui-sortable-handle" style="">Nottingham Forest</li>
+      <li id="Brighton Hove" class="ui-state-default ui-sortable-handle" style="">Brighton and Hove Albion</li>
+      <li id="Brentford" class="ui-state-default ui-sortable-handle">Brentford</li>
+      <li id="Leeds United" class="ui-state-default ui-sortable-handle" style="">Leeds United</li>
+      <li id="Everton" class="ui-state-default ui-sortable-handle" style="">Everton</li>
+      <li id="Crystal Palace" class="ui-state-default ui-sortable-handle">Crystal Palace </li>
+      <li id="Newcastle" class="ui-state-default ui-sortable-handle">Newcastle United</li>
+      <li id="Fulham" class="ui-state-default ui-sortable-handle" style="">Fulham</li>
+      <li id="Bournemouth" class="ui-state-default ui-sortable-handle" style="">Bournemouth</li>
+      <li id="Sunderland" class="ui-state-default ui-sortable-handle" style="">Sunderland</li>
+      <li id="Ipswich" class="ui-state-default ui-sortable-handle" style=""> Ipswich Town</li>
+      <li id="Coventry" class="ui-state-default ui-sortable-handle" style="">Coventry City</li>
+      <li id="Hull" class="ui-state-default ui-sortable-handle" style="">Hull City </li>
+    </ol>
+    <hr>
+    <h3><a name='1506905963'>Sam Leggett</a></h3>
+    <h4>Finishing Positions</h4>:
+    <ol class="ui-sortable" id="Sam Leggett">
+      <li id="Arsenal" class="ui-state-default ui-sortable-handle">Arsenal</li>
+      <li id="Chelsea" class="ui-state-default ui-sortable-handle" style="">Chelsea</li>
+      <li id="Man City" class="ui-state-default ui-sortable-handle" style="">Manchester City</li>
+      <li id="Man United" class="ui-state-default ui-sortable-handle" style="">Manchester United</li>
+      <li id="Liverpool" class="ui-state-default ui-sortable-handle" style="">Liverpool</li>
+      <li id="Aston Villa" class="ui-state-default ui-sortable-handle" style="">Aston Villa</li>
+      <li id="Brighton Hove" class="ui-state-default ui-sortable-handle" style="">Brighton and Hove Albion</li>
+      <li id="Bournemouth" class="ui-state-default ui-sortable-handle" style="">Bournemouth</li>
+      <li id="Tottenham" class="ui-state-default ui-sortable-handle" style="">Tottenham Hotspur</li>
+      <li id="Brentford" class="ui-state-default ui-sortable-handle">Brentford</li>
+      <li id="Nottingham" class="ui-state-default ui-sortable-handle" style="">Nottingham Forest</li>
+      <li id="Everton" class="ui-state-default ui-sortable-handle" style="">Everton</li>
+      <li id="Crystal Palace" class="ui-state-default ui-sortable-handle" style="">Crystal Palace </li>
+      <li id="Newcastle" class="ui-state-default ui-sortable-handle" style="">Newcastle United</li>
+      <li id="Fulham" class="ui-state-default ui-sortable-handle">Fulham</li>
+      <li id="Sunderland" class="ui-state-default ui-sortable-handle" style="">Sunderland</li>
+      <li id="Leeds United" class="ui-state-default ui-sortable-handle">Leeds United</li>
+      <li id="Coventry" class="ui-state-default ui-sortable-handle" style="">Coventry City</li>
+      <li id="Ipswich" class="ui-state-default ui-sortable-handle" style=""> Ipswich Town</li>
+      <li id="Hull" class="ui-state-default ui-sortable-handle" style="">Hull City </li>
+    </ol>
+    <hr>
+    <h3><a name='149943079'>Kev Kirby</a></h3>
+    <h4>Finishing Positions</h4>:
+    <ol class="ui-sortable" id="Kev Kirby">
+      <li id="Arsenal" class="ui-state-default ui-sortable-handle">Arsenal</li>
+      <li id="Chelsea" class="ui-state-default ui-sortable-handle" style="">Chelsea</li>
+      <li id="Liverpool" class="ui-state-default ui-sortable-handle" style="">Liverpool</li>
+      <li id="Man City" class="ui-state-default ui-sortable-handle" style="">Manchester City</li>
+      <li id="Man United" class="ui-state-default ui-sortable-handle" style="">Manchester United</li>
+      <li id="Aston Villa" class="ui-state-default ui-sortable-handle" style="">Aston Villa</li>
+      <li id="Tottenham" class="ui-state-default ui-sortable-handle" style="">Tottenham Hotspur</li>
+      <li id="Brighton Hove" class="ui-state-default ui-sortable-handle" style="">Brighton and Hove Albion</li>
+      <li id="Newcastle" class="ui-state-default ui-sortable-handle" style="">Newcastle United</li>
+      <li id="Crystal Palace" class="ui-state-default ui-sortable-handle" style="">Crystal Palace </li>
+      <li id="Bournemouth" class="ui-state-default ui-sortable-handle" style="">Bournemouth</li>
+      <li id="Brentford" class="ui-state-default ui-sortable-handle" style="">Brentford</li>
+      <li id="Leeds United" class="ui-state-default ui-sortable-handle" style="">Leeds United</li>
+      <li id="Everton" class="ui-state-default ui-sortable-handle" style="">Everton</li>
+      <li id="Fulham" class="ui-state-default ui-sortable-handle" style="">Fulham</li>
+      <li id="Nottingham" class="ui-state-default ui-sortable-handle" style="">Nottingham Forest</li>
+      <li id="Sunderland" class="ui-state-default ui-sortable-handle" style="">Sunderland</li>
+      <li id="Ipswich" class="ui-state-default ui-sortable-handle"> Ipswich Town</li>
+      <li id="Hull" class="ui-state-default ui-sortable-handle" style="">Hull City </li>
+      <li id="Coventry" class="ui-state-default ui-sortable-handle" style="">Coventry City</li>
+    </ol>
+    <hr>
+    <h3><a name='-550108904'>Andy Cooper</a></h3>
+    <h4>Finishing Positions</h4>:
+    <ol class="ui-sortable" id="Andy Cooper">
+      <li id="Arsenal" class="ui-state-default ui-sortable-handle" style="">Arsenal</li>
+      <li id="Man United" class="ui-state-default ui-sortable-handle" style="">Manchester United</li>
+      <li id="Man City" class="ui-state-default ui-sortable-handle" style="">Manchester City</li>
+      <li id="Liverpool" class="ui-state-default ui-sortable-handle" style="">Liverpool</li>
+      <li id="Chelsea" class="ui-state-default ui-sortable-handle" style="">Chelsea</li>
+      <li id="Tottenham" class="ui-state-default ui-sortable-handle" style="">Tottenham Hotspur</li>
+      <li id="Aston Villa" class="ui-state-default ui-sortable-handle" style="">Aston Villa</li>
+      <li id="Nottingham" class="ui-state-default ui-sortable-handle" style="">Nottingham Forest</li>
+      <li id="Bournemouth" class="ui-state-default ui-sortable-handle" style="">Bournemouth</li>
+      <li id="Brentford" class="ui-state-default ui-sortable-handle" style="">Brentford</li>
+      <li id="Brighton Hove" class="ui-state-default ui-sortable-handle">Brighton and Hove Albion</li>
+      <li id="Crystal Palace" class="ui-state-default ui-sortable-handle">Crystal Palace </li>
+      <li id="Leeds United" class="ui-state-default ui-sortable-handle" style="">Leeds United</li>
+      <li id="Everton" class="ui-state-default ui-sortable-handle">Everton</li>
+      <li id="Fulham" class="ui-state-default ui-sortable-handle" style="">Fulham</li>
+      <li id="Newcastle" class="ui-state-default ui-sortable-handle" style="">Newcastle United</li>
+      <li id="Sunderland" class="ui-state-default ui-sortable-handle">Sunderland</li>
+      <li id="Ipswich" class="ui-state-default ui-sortable-handle" style=""> Ipswich Town</li>
+      <li id="Hull" class="ui-state-default ui-sortable-handle" style="">Hull City </li>
+      <li id="Coventry" class="ui-state-default ui-sortable-handle" style="">Coventry City</li>
+    </ol>
+    <hr>
+    <h3><a name='1863118700'>Kevin Elliott</a></h3>
+    <h4>Finishing Positions</h4>:
+    <ol class="ui-sortable" id="Kevin Elliott">
+      <li id="Ipswich" class="ui-state-default ui-sortable-handle" style=""> Ipswich Town</li>
+      <li id="Coventry" class="ui-state-default ui-sortable-handle" style="">Coventry City</li>
+      <li id="Newcastle" class="ui-state-default ui-sortable-handle" style="">Newcastle United</li>
+      <li id="Crystal Palace" class="ui-state-default ui-sortable-handle" style="">Crystal Palace </li>
+      <li id="Hull" class="ui-state-default ui-sortable-handle" style="">Hull City </li>
+      <li id="Sunderland" class="ui-state-default ui-sortable-handle" style="">Sunderland</li>
+      <li id="Brentford" class="ui-state-default ui-sortable-handle" style="">Brentford</li>
+      <li id="Leeds United" class="ui-state-default ui-sortable-handle" style="">Leeds United</li>
+      <li id="Tottenham" class="ui-state-default ui-sortable-handle" style="">Tottenham Hotspur</li>
+      <li id="Fulham" class="ui-state-default ui-sortable-handle" style="">Fulham</li>
+      <li id="Bournemouth" class="ui-state-default ui-sortable-handle">Bournemouth</li>
+      <li id="Brighton Hove" class="ui-state-default ui-sortable-handle">Brighton and Hove Albion</li>
+      <li id="Everton" class="ui-state-default ui-sortable-handle" style="">Everton</li>
+      <li id="Chelsea" class="ui-state-default ui-sortable-handle">Chelsea</li>
+      <li id="Nottingham" class="ui-state-default ui-sortable-handle" style="">Nottingham Forest</li>
+      <li id="Aston Villa" class="ui-state-default ui-sortable-handle" style="">Aston Villa</li>
+      <li id="Man City" class="ui-state-default ui-sortable-handle">Manchester City</li>
+      <li id="Man United" class="ui-state-default ui-sortable-handle" style="">Manchester United</li>
+      <li id="Arsenal" class="ui-state-default ui-sortable-handle" style="">Arsenal</li>
+      <li id="Liverpool" class="ui-state-default ui-sortable-handle" style="">Liverpool</li>
+    </ol>
+    <hr>
+    <h3><a name='-1017874798'>Ewan Kilgour</a></h3>
+    <h4>Finishing Positions</h4>:
+    <ol class="ui-sortable" id="Ewan Kilgour">
+      <li id="Chelsea" class="ui-state-default ui-sortable-handle" style="">Chelsea</li>
+      <li id="Arsenal" class="ui-state-default ui-sortable-handle">Arsenal</li>
+      <li id="Liverpool" class="ui-state-default ui-sortable-handle" style="">Liverpool</li>
+      <li id="Man City" class="ui-state-default ui-sortable-handle" style="">Manchester City</li>
+      <li id="Man United" class="ui-state-default ui-sortable-handle" style="">Manchester United</li>
+      <li id="Newcastle" class="ui-state-default ui-sortable-handle" style="">Newcastle United</li>
+      <li id="Bournemouth" class="ui-state-default ui-sortable-handle">Bournemouth</li>
+      <li id="Brentford" class="ui-state-default ui-sortable-handle">Brentford</li>
+      <li id="Everton" class="ui-state-default ui-sortable-handle" style="">Everton</li>
+      <li id="Brighton Hove" class="ui-state-default ui-sortable-handle">Brighton and Hove Albion</li>
+      <li id="Aston Villa" class="ui-state-default ui-sortable-handle" style="">Aston Villa</li>
+      <li id="Tottenham" class="ui-state-default ui-sortable-handle" style="">Tottenham Hotspur</li>
+      <li id="Sunderland" class="ui-state-default ui-sortable-handle" style="">Sunderland</li>
+      <li id="Leeds United" class="ui-state-default ui-sortable-handle" style="">Leeds United</li>
+      <li id="Crystal Palace" class="ui-state-default ui-sortable-handle" style="">Crystal Palace </li>
+      <li id="Coventry" class="ui-state-default ui-sortable-handle">Coventry City</li>
+      <li id="Fulham" class="ui-state-default ui-sortable-handle">Fulham</li>
+      <li id="Hull" class="ui-state-default ui-sortable-handle">Hull City </li>
+      <li id="Ipswich" class="ui-state-default ui-sortable-handle"> Ipswich Town</li>
+      <li id="Nottingham" class="ui-state-default ui-sortable-handle">Nottingham Forest</li>
+    </ol>
+    <hr>
+    <h3><a name='-1186983032'>Matt Ingram</a></h3>
+    <h4>Finishing Positions</h4>:
+    <ol class="ui-sortable" id="Matt Ingram">
+      <li id="Arsenal" class="ui-state-default ui-sortable-handle">Arsenal</li>
+      <li id="Liverpool" class="ui-state-default ui-sortable-handle" style="">Liverpool</li>
+      <li id="Man United" class="ui-state-default ui-sortable-handle" style="">Manchester United</li>
+      <li id="Man City" class="ui-state-default ui-sortable-handle" style="">Manchester City</li>
+      <li id="Chelsea" class="ui-state-default ui-sortable-handle" style="">Chelsea</li>
+      <li id="Brentford" class="ui-state-default ui-sortable-handle">Brentford</li>
+      <li id="Brighton Hove" class="ui-state-default ui-sortable-handle">Brighton and Hove Albion</li>
+      <li id="Tottenham" class="ui-state-default ui-sortable-handle" style="">Tottenham Hotspur</li>
+      <li id="Crystal Palace" class="ui-state-default ui-sortable-handle" style="">Crystal Palace </li>
+      <li id="Aston Villa" class="ui-state-default ui-sortable-handle" style="">Aston Villa</li>
+      <li id="Bournemouth" class="ui-state-default ui-sortable-handle" style="">Bournemouth</li>
+      <li id="Fulham" class="ui-state-default ui-sortable-handle">Fulham</li>
+      <li id="Nottingham" class="ui-state-default ui-sortable-handle" style="">Nottingham Forest</li>
+      <li id="Everton" class="ui-state-default ui-sortable-handle" style="">Everton</li>
+      <li id="Newcastle" class="ui-state-default ui-sortable-handle">Newcastle United</li>
+      <li id="Sunderland" class="ui-state-default ui-sortable-handle" style="">Sunderland</li>
+      <li id="Ipswich" class="ui-state-default ui-sortable-handle" style=""> Ipswich Town</li>
+      <li id="Leeds United" class="ui-state-default ui-sortable-handle" style="">Leeds United</li>
+      <li id="Coventry" class="ui-state-default ui-sortable-handle" style="">Coventry City</li>
+      <li id="Hull" class="ui-state-default ui-sortable-handle" style="">Hull City </li>
+    </ol>
+    <hr>
+    <h3><a name='75191'>Kam</a></h3>
+    <h4>Finishing Positions</h4>:
+    <ol class="ui-sortable" id="Kam">
+      <li id="Man City" class="ui-state-default ui-sortable-handle" style="">Manchester City</li>
+      <li id="Liverpool" class="ui-state-default ui-sortable-handle" style="">Liverpool</li>
+      <li id="Arsenal" class="ui-state-default ui-sortable-handle" style="">Arsenal</li>
+      <li id="Chelsea" class="ui-state-default ui-sortable-handle" style="">Chelsea</li>
+      <li id="Aston Villa" class="ui-state-default ui-sortable-handle" style="">Aston Villa</li>
+      <li id="Brentford" class="ui-state-default ui-sortable-handle" style="">Brentford</li>
+      <li id="Man United" class="ui-state-default ui-sortable-handle" style="">Manchester United</li>
+      <li id="Everton" class="ui-state-default ui-sortable-handle">Everton</li>
+      <li id="Fulham" class="ui-state-default ui-sortable-handle">Fulham</li>
+      <li id="Newcastle" class="ui-state-default ui-sortable-handle" style="">Newcastle United</li>
+      <li id="Brighton Hove" class="ui-state-default ui-sortable-handle" style="">Brighton and Hove Albion</li>
+      <li id="Bournemouth" class="ui-state-default ui-sortable-handle" style="">Bournemouth</li>
+      <li id="Crystal Palace" class="ui-state-default ui-sortable-handle" style="">Crystal Palace </li>
+      <li id="Leeds United" class="ui-state-default ui-sortable-handle">Leeds United</li>
+      <li id="Tottenham" class="ui-state-default ui-sortable-handle" style="">Tottenham Hotspur</li>
+      <li id="Nottingham" class="ui-state-default ui-sortable-handle" style="">Nottingham Forest</li>
+      <li id="Sunderland" class="ui-state-default ui-sortable-handle">Sunderland</li>
+      <li id="Ipswich" class="ui-state-default ui-sortable-handle" style=""> Ipswich Town</li>
+      <li id="Hull" class="ui-state-default ui-sortable-handle" style="">Hull City </li>
+      <li id="Coventry" class="ui-state-default ui-sortable-handle" style="">Coventry City</li>
+    </ol>
+    <hr>
+    <h3><a name='-258592176'>Simon Burford</a></h3>
+    <h4>Finishing Positions</h4>:
+    <ol class="ui-sortable" id="Simon Burford">
+      <li id="Arsenal" class="ui-state-default ui-sortable-handle">Arsenal</li>
+      <li id="Liverpool" class="ui-state-default ui-sortable-handle" style="">Liverpool</li>
+      <li id="Chelsea" class="ui-state-default ui-sortable-handle" style="">Chelsea</li>
+      <li id="Man City" class="ui-state-default ui-sortable-handle" style="">Manchester City</li>
+      <li id="Aston Villa" class="ui-state-default ui-sortable-handle" style="">Aston Villa</li>
+      <li id="Man United" class="ui-state-default ui-sortable-handle" style="">Manchester United</li>
+      <li id="Brighton Hove" class="ui-state-default ui-sortable-handle" style="">Brighton and Hove Albion</li>
+      <li id="Bournemouth" class="ui-state-default ui-sortable-handle" style="">Bournemouth</li>
+      <li id="Everton" class="ui-state-default ui-sortable-handle" style="">Everton</li>
+      <li id="Leeds United" class="ui-state-default ui-sortable-handle" style="">Leeds United</li>
+      <li id="Sunderland" class="ui-state-default ui-sortable-handle" style="">Sunderland</li>
+      <li id="Brentford" class="ui-state-default ui-sortable-handle" style="">Brentford</li>
+      <li id="Tottenham" class="ui-state-default ui-sortable-handle" style="">Tottenham Hotspur</li>
+      <li id="Newcastle" class="ui-state-default ui-sortable-handle" style="">Newcastle United</li>
+      <li id="Fulham" class="ui-state-default ui-sortable-handle">Fulham</li>
+      <li id="Coventry" class="ui-state-default ui-sortable-handle" style="">Coventry City</li>
+      <li id="Crystal Palace" class="ui-state-default ui-sortable-handle" style="">Crystal Palace </li>
+      <li id="Nottingham" class="ui-state-default ui-sortable-handle">Nottingham Forest</li>
+      <li id="Ipswich" class="ui-state-default ui-sortable-handle" style=""> Ipswich Town</li>
+      <li id="Hull" class="ui-state-default ui-sortable-handle" style="">Hull City </li>
+    </ol>
+    <hr>
+    <h3><a name='-385479423'>Chris Mackie</a></h3>
+    <h4>Finishing Positions</h4>:
+    <ol class="ui-sortable" id="Chris Mackie">
+      <li id="Arsenal" class="ui-state-default ui-sortable-handle">Arsenal</li>
+      <li id="Man United" class="ui-state-default ui-sortable-handle" style="">Manchester United</li>
+      <li id="Chelsea" class="ui-state-default ui-sortable-handle" style="">Chelsea</li>
+      <li id="Man City" class="ui-state-default ui-sortable-handle" style="">Manchester City</li>
+      <li id="Liverpool" class="ui-state-default ui-sortable-handle" style="">Liverpool</li>
+      <li id="Aston Villa" class="ui-state-default ui-sortable-handle" style="">Aston Villa</li>
+      <li id="Tottenham" class="ui-state-default ui-sortable-handle" style="">Tottenham Hotspur</li>
+      <li id="Bournemouth" class="ui-state-default ui-sortable-handle" style="">Bournemouth</li>
+      <li id="Brentford" class="ui-state-default ui-sortable-handle">Brentford</li>
+      <li id="Brighton Hove" class="ui-state-default ui-sortable-handle">Brighton and Hove Albion</li>
+      <li id="Crystal Palace" class="ui-state-default ui-sortable-handle">Crystal Palace </li>
+      <li id="Newcastle" class="ui-state-default ui-sortable-handle" style="">Newcastle United</li>
+      <li id="Fulham" class="ui-state-default ui-sortable-handle" style="">Fulham</li>
+      <li id="Everton" class="ui-state-default ui-sortable-handle" style="">Everton</li>
+      <li id="Nottingham" class="ui-state-default ui-sortable-handle">Nottingham Forest</li>
+      <li id="Sunderland" class="ui-state-default ui-sortable-handle" style="">Sunderland</li>
+      <li id="Coventry" class="ui-state-default ui-sortable-handle" style="">Coventry City</li>
+      <li id="Leeds United" class="ui-state-default ui-sortable-handle" style="">Leeds United</li>
+      <li id="Hull" class="ui-state-default ui-sortable-handle" style="">Hull City </li>
+      <li id="Ipswich" class="ui-state-default ui-sortable-handle" style=""> Ipswich Town</li>
+    </ol>
+    <hr>
+    <h3><a name='-1891309429'>Miguel Pellicer</a></h3>
+    <h4>Finishing Positions</h4>:
+    <ol class="ui-sortable" id="Miguel Pellicer">
+      <li id="Arsenal" class="ui-state-default ui-sortable-handle">Arsenal</li>
+      <li id="Man City" class="ui-state-default ui-sortable-handle" style="">Manchester City</li>
+      <li id="Chelsea" class="ui-state-default ui-sortable-handle" style="">Chelsea</li>
+      <li id="Aston Villa" class="ui-state-default ui-sortable-handle" style="">Aston Villa</li>
+      <li id="Liverpool" class="ui-state-default ui-sortable-handle" style="">Liverpool</li>
+      <li id="Tottenham" class="ui-state-default ui-sortable-handle" style="">Tottenham Hotspur</li>
+      <li id="Man United" class="ui-state-default ui-sortable-handle" style="">Manchester United</li>
+      <li id="Fulham" class="ui-state-default ui-sortable-handle" style="">Fulham</li>
+      <li id="Newcastle" class="ui-state-default ui-sortable-handle" style="">Newcastle United</li>
+      <li id="Bournemouth" class="ui-state-default ui-sortable-handle">Bournemouth</li>
+      <li id="Everton" class="ui-state-default ui-sortable-handle" style="">Everton</li>
+      <li id="Coventry" class="ui-state-default ui-sortable-handle">Coventry City</li>
+      <li id="Crystal Palace" class="ui-state-default ui-sortable-handle">Crystal Palace </li>
+      <li id="Hull" class="ui-state-default ui-sortable-handle">Hull City </li>
+      <li id="Leeds United" class="ui-state-default ui-sortable-handle">Leeds United</li>
+      <li id="Nottingham" class="ui-state-default ui-sortable-handle">Nottingham Forest</li>
+      <li id="Brentford" class="ui-state-default ui-sortable-handle" style="">Brentford</li>
+      <li id="Brighton Hove" class="ui-state-default ui-sortable-handle" style="">Brighton and Hove Albion</li>
+      <li id="Sunderland" class="ui-state-default ui-sortable-handle">Sunderland</li>
+      <li id="Ipswich" class="ui-state-default ui-sortable-handle" style=""> Ipswich Town</li>
+    </ol>
+    <hr>
+    <h3><a name='1986304827'>Bernie</a></h3>
+    <h4>Finishing Positions</h4>:
+    <ol class="ui-sortable" id="Bernie">
+      <li id="Arsenal" class="ui-state-default ui-sortable-handle">Arsenal</li>
+      <li id="Liverpool" class="ui-state-default ui-sortable-handle" style="">Liverpool</li>
+      <li id="Man United" class="ui-state-default ui-sortable-handle" style="">Manchester United</li>
+      <li id="Man City" class="ui-state-default ui-sortable-handle" style="">Manchester City</li>
+      <li id="Aston Villa" class="ui-state-default ui-sortable-handle" style="">Aston Villa</li>
+      <li id="Chelsea" class="ui-state-default ui-sortable-handle" style="">Chelsea</li>
+      <li id="Newcastle" class="ui-state-default ui-sortable-handle" style="">Newcastle United</li>
+      <li id="Tottenham" class="ui-state-default ui-sortable-handle" style="">Tottenham Hotspur</li>
+      <li id="Everton" class="ui-state-default ui-sortable-handle" style="">Everton</li>
+      <li id="Coventry" class="ui-state-default ui-sortable-handle">Coventry City</li>
+      <li id="Crystal Palace" class="ui-state-default ui-sortable-handle" style="">Crystal Palace </li>
+      <li id="Fulham" class="ui-state-default ui-sortable-handle" style="">Fulham</li>
+      <li id="Nottingham" class="ui-state-default ui-sortable-handle" style="">Nottingham Forest</li>
+      <li id="Brentford" class="ui-state-default ui-sortable-handle" style="">Brentford</li>
+      <li id="Bournemouth" class="ui-state-default ui-sortable-handle" style="">Bournemouth</li>
+      <li id="Leeds United" class="ui-state-default ui-sortable-handle" style="">Leeds United</li>
+      <li id="Sunderland" class="ui-state-default ui-sortable-handle" style="">Sunderland</li>
+      <li id="Brighton Hove" class="ui-state-default ui-sortable-handle" style="">Brighton and Hove Albion</li>
+      <li id="Ipswich" class="ui-state-default ui-sortable-handle" style=""> Ipswich Town</li>
+      <li id="Hull" class="ui-state-default ui-sortable-handle">Hull City </li>
+    </ol>
+    <hr>
+    <h3><a name='-1923745465'>Andy Saunders</a></h3>
+    <h4>Finishing Positions</h4>:
+    <ol class="ui-sortable" id="Andy Saunders">
+      <li id="Arsenal" class="ui-state-default ui-sortable-handle">Arsenal</li>
+      <li id="Man City" class="ui-state-default ui-sortable-handle" style="">Manchester City</li>
+      <li id="Man United" class="ui-state-default ui-sortable-handle" style="">Manchester United</li>
+      <li id="Aston Villa" class="ui-state-default ui-sortable-handle">Aston Villa</li>
+      <li id="Liverpool" class="ui-state-default ui-sortable-handle" style="">Liverpool</li>
+      <li id="Bournemouth" class="ui-state-default ui-sortable-handle">Bournemouth</li>
+      <li id="Sunderland" class="ui-state-default ui-sortable-handle" style="">Sunderland</li>
+      <li id="Brighton Hove" class="ui-state-default ui-sortable-handle" style="">Brighton and Hove Albion</li>
+      <li id="Brentford" class="ui-state-default ui-sortable-handle">Brentford</li>
+      <li id="Chelsea" class="ui-state-default ui-sortable-handle">Chelsea</li>
+      <li id="Fulham" class="ui-state-default ui-sortable-handle" style="">Fulham</li>
+      <li id="Newcastle" class="ui-state-default ui-sortable-handle" style="">Newcastle United</li>
+      <li id="Everton" class="ui-state-default ui-sortable-handle" style="">Everton</li>
+      <li id="Leeds United" class="ui-state-default ui-sortable-handle" style="">Leeds United</li>
+      <li id="Crystal Palace" class="ui-state-default ui-sortable-handle" style="">Crystal Palace </li>
+      <li id="Nottingham" class="ui-state-default ui-sortable-handle" style="">Nottingham Forest</li>
+      <li id="Tottenham" class="ui-state-default ui-sortable-handle" style="">Tottenham Hotspur</li>
+      <li id="Coventry" class="ui-state-default ui-sortable-handle" style="">Coventry City</li>
+      <li id="Ipswich" class="ui-state-default ui-sortable-handle" style=""> Ipswich Town</li>
+      <li id="Hull" class="ui-state-default ui-sortable-handle">Hull City </li>
+    </ol>
+    <hr>
+    <h3><a name='-1790760724'>Asa Cooke</a></h3>
+    <h4>Finishing Positions</h4>:
+    <ol class="ui-sortable" id="Asa Cooke">
+      <li id="Arsenal" class="ui-state-default ui-sortable-handle">Arsenal</li>
+      <li id="Aston Villa" class="ui-state-default ui-sortable-handle">Aston Villa</li>
+      <li id="Man City" class="ui-state-default ui-sortable-handle">Manchester City</li>
+      <li id="Tottenham" class="ui-state-default ui-sortable-handle">Tottenham Hotspur</li>
+      <li id="Liverpool" class="ui-state-default ui-sortable-handle" style="">Liverpool</li>
+      <li id="Chelsea" class="ui-state-default ui-sortable-handle" style="">Chelsea</li>
+      <li id="Man United" class="ui-state-default ui-sortable-handle" style="">Manchester United</li>
+      <li id="Bournemouth" class="ui-state-default ui-sortable-handle" style="">Bournemouth</li>
+      <li id="Sunderland" class="ui-state-default ui-sortable-handle" style="">Sunderland</li>
+      <li id="Crystal Palace" class="ui-state-default ui-sortable-handle" style="">Crystal Palace </li>
+      <li id="Newcastle" class="ui-state-default ui-sortable-handle" style="">Newcastle United</li>
+      <li id="Nottingham" class="ui-state-default ui-sortable-handle" style="">Nottingham Forest</li>
+      <li id="Leeds United" class="ui-state-default ui-sortable-handle" style="">Leeds United</li>
+      <li id="Brighton Hove" class="ui-state-default ui-sortable-hand
+ le" style="">Brighton and Hove Albion</li>
+      <li id="Everton" class="ui-state-default ui-sortable-handle" style="">Everton</li>
+      <li id="Brentford" class="ui-state-default ui-sortable-handle" style="">Brentford</li>
+      <li id="Coventry" class="ui-state-default ui-sortable-handle" style="">Coventry City</li>
+      <li id="Fulham" class="ui-state-default ui-sortable-handle" style="">Fulham</li>
+      <li id="Hull" class="ui-state-default ui-sortable-handle" style="">Hull City </li>
+      <li id="Ipswich" class="ui-state-default ui-sortable-handle" style=""> Ipswich Town</li>
+    </ol>
+    <hr>
+    <h3><a name='-331999048'>Simon Webb</a></h3>
+    <h4>Finishing Positions</h4>:
+    <ol class="ui-sortable" id="Simon Webb">
+      <li id="Arsenal" class="ui-state-default ui-sortable-handle">Arsenal</li>
+      <li id="Man City" class="ui-state-default ui-sortable-handle" style="">Manchester City</li>
+      <li id="Chelsea" class="ui-state-default ui-sortable-handle" style="">Chelsea</li>
+      <li id="Liverpool" class="ui-state-default ui-sortable-handle" style="">Liverpool</li>
+      <li id="Tottenham" class="ui-state-default ui-sortable-handle" style="">Tottenham Hotspur</li>
+      <li id="Man United" class="ui-state-default ui-sortable-handle" style="">Manchester United</li>
+      <li id="Aston Villa" class="ui-state-default ui-sortable-handle">Aston Villa</li>
+      <li id="Brentford" class="ui-state-default ui-sortable-handle" style="">Brentford</li>
+      <li id="Newcastle" class="ui-state-default ui-sortable-handle" style="">Newcastle United</li>
+      <li id="Brighton Hove" class="ui-state-default ui-sortable-handle" style="">Brighton and Hove Albion</li>
+      <li id="Bournemouth" class="ui-state-default ui-sortable-handle">Bournemouth</li>
+      <li id="Sunderland" class="ui-state-default ui-sortable-handle" style="">Sunderland</li>
+      <li id="Nottingham" class="ui-state-default ui-sortable-handle" style="">Nottingham Forest</li>
+      <li id="Everton" class="ui-state-default ui-sortable-handle" style="">Everton</li>
+      <li id="Crystal Palace" class="ui-state-default ui-sortable-handle" style="">Crystal Palace </li>
+      <li id="Leeds United" class="ui-state-default ui-sortable-handle" style="">Leeds United</li>
+      <li id="Fulham" class="ui-state-default ui-sortable-handle" style="">Fulham</li>
+      <li id="Coventry" class="ui-state-default ui-sortable-handle">Coventry City</li>
+      <li id="Hull" class="ui-state-default ui-sortable-handle">Hull City </li>
+      <li id="Ipswich" class="ui-state-default ui-sortable-handle"> Ipswich Town</li>
+    </ol>
+    <hr>
+    <h3><a name='-2102821572'>Joshua Hutchins</a></h3>
+    <h4>Finishing Positions</h4>:
+    <ol class="ui-sortable" id="Joshua Hutchins">
+      <li id="Arsenal" class="ui-state-default ui-sortable-handle">Arsenal</li>
+      <li id="Chelsea" class="ui-state-default ui-sortable-handle" style="">Chelsea</li>
+      <li id="Man City" class="ui-state-default ui-sortable-handle" style="">Manchester City</li>
+      <li id="Liverpool" class="ui-state-default ui-sortable-handle" style="">Liverpool</li>
+      <li id="Man United" class="ui-state-default ui-sortable-handle" style="">Manchester United</li>
+      <li id="Tottenham" class="ui-state-default ui-sortable-handle" style="">Tottenham Hotspur</li>
+      <li id="Brentford" class="ui-state-default ui-sortable-handle" style="">Brentford</li>
+      <li id="Aston Villa" class="ui-state-default ui-sortable-handle">Aston Villa</li>
+      <li id="Brighton Hove" class="ui-state-default ui-sortable-handle" style="">Brighton and Hove Albion</li>
+      <li id="Newcastle" class="ui-state-default ui-sortable-handle" style="">Newcastle United</li>
+      <li id="Nottingham" class="ui-state-default ui-sortable-handle" style="">Nottingham Forest</li>
+      <li id="Leeds United" class="ui-state-default ui-sortable-handle" style="">Leeds United</li>
+      <li id="Sunderland" class="ui-state-default ui-sortable-handle" style="">Sunderland</li>
+      <li id="Bournemouth" class="ui-state-default ui-sortable-handle" style="">Bournemouth</li>
+      <li id="Crystal Palace" class="ui-state-default ui-sortable-handle">Crystal Palace </li>
+      <li id="Everton" class="ui-state-default ui-sortable-handle" style="">Everton</li>
+      <li id="Fulham" class="ui-state-default ui-sortable-handle" style="">Fulham</li>
+      <li id="Coventry" class="ui-state-default ui-sortable-handle" style="">Coventry City</li>
+      <li id="Ipswich" class="ui-state-default ui-sortable-handle" style=""> Ipswich Town</li>
+      <li id="Hull" class="ui-state-default ui-sortable-handle" style="">Hull City </li>
+    </ol>
+    <hr>
+    <h3><a name='-228735208'>Steve E</a></h3>
+    <h4>Finishing Positions</h4>:
+    <ol class="ui-sortable" id="Steve E">
+      <li id="Liverpool" class="ui-state-default ui-sortable-handle" style="">Liverpool</li>
+      <li id="Coventry" class="ui-state-default ui-sortable-handle" style="">Coventry City</li>
+      <li id="Everton" class="ui-state-default ui-sortable-handle" style="">Everton</li>
+      <li id="Aston Villa" class="ui-state-default ui-sortable-handle">Aston Villa</li>
+      <li id="Bournemouth" class="ui-state-default ui-sortable-handle">Bournemouth</li>
+      <li id="Crystal Palace" class="ui-state-default ui-sortable-handle" style="">Crystal Palace </li>
+      <li id="Brentford" class="ui-state-default ui-sortable-handle">Brentford</li>
+      <li id="Fulham" class="ui-state-default ui-sortable-handle" style="">Fulham</li>
+      <li id="Brighton Hove" class="ui-state-default ui-sortable-handle">Brighton and Hove Albion</li>
+      <li id="Hull" class="ui-state-default ui-sortable-handle">Hull City </li>
+      <li id="Newcastle" class="ui-state-default ui-sortable-handle" style="">Newcastle United</li>
+      <li id="Ipswich" class="ui-state-default ui-sortable-handle"> Ipswich Town</li>
+      <li id="Leeds United" class="ui-state-default ui-sortable-handle">Leeds United</li>
+      <li id="Nottingham" class="ui-state-default ui-sortable-handle">Nottingham Forest</li>
+      <li id="Sunderland" class="ui-state-default ui-sortable-handle">Sunderland</li>
+      <li id="Tottenham" class="ui-state-default ui-sortable-handle">Tottenham Hotspur</li>
+      <li id="Man City" class="ui-state-default ui-sortable-handle" style="">Manchester City</li>
+      <li id="Arsenal" class="ui-state-default ui-sortable-handle" style="">Arsenal</li>
+      <li id="Chelsea" class="ui-state-default ui-sortable-handle" style="">Chelsea</li>
+      <li id="Man United" class="ui-state-default ui-sortable-handle" style="">Manchester United</li>
+    </ol>
+    <hr>
+    <h3><a name='2124547366'>Robert James</a></h3>
+    <h4>Finishing Positions</h4>:
+    <ol class="ui-sortable" id="Robert James">
+      <li id="Liverpool" class="ui-state-default ui-sortable-handle" style="">Liverpool</li>
+      <li id="Arsenal" class="ui-state-default ui-sortable-handle">Arsenal</li>
+      <li id="Chelsea" class="ui-state-default ui-sortable-handle" style="">Chelsea</li>
+      <li id="Man City" class="ui-state-default ui-sortable-handle" style="">Manchester City</li>
+      <li id="Man United" class="ui-state-default ui-sortable-handle" style="">Manchester United</li>
+      <li id="Aston Villa" class="ui-state-default ui-sortable-handle">Aston Villa</li>
+      <li id="Everton" class="ui-state-default ui-sortable-handle" style="">Everton</li>
+      <li id="Brentford" class="ui-state-default ui-sortable-handle">Brentford</li>
+      <li id="Fulham" class="ui-state-default ui-sortable-handle" style="">Fulham</li>
+      <li id="Brighton Hove" class="ui-state-default ui-sortable-handle">Brighton and Hove Albion</li>
+      <li id="Crystal Palace" class="ui-state-default ui-sortable-handle">Crystal Palace </li>
+      <li id="Bournemouth" class="ui-state-default ui-sortable-handle" style="">Bournemouth</li>
+      <li id="Tottenham" class="ui-state-default ui-sortable-handle">Tottenham Hotspur</li>
+      <li id="Newcastle" class="ui-state-default ui-sortable-handle" style="">Newcastle United</li>
+      <li id="Leeds United" class="ui-state-default ui-sortable-handle" style="">Leeds United</li>
+      <li id="Sunderland" class="ui-state-default ui-sortable-handle" style="">Sunderland</li>
+      <li id="Nottingham" class="ui-state-default ui-sortable-handle" style="">Nottingham Forest</li>
+      <li id="Coventry" class="ui-state-default ui-sortable-handle" style="">Coventry City</li>
+      <li id="Ipswich" class="ui-state-default ui-sortable-handle" style=""> Ipswich Town</li>
+      <li id="Hull" class="ui-state-default ui-sortable-handle" style="">Hull City </li>
+    </ol>
+    <hr>
+    <h3><a name='265445033'>Yannick</a></h3>
+    <h4>Finishing Positions</h4>:
+    <ol class="ui-sortable" id="Yannick">
+      <li id="Arsenal" class="ui-state-default ui-sortable-handle">Arsenal</li>
+      <li id="Man City" class="ui-state-default ui-sortable-handle" style="">Manchester City</li>
+      <li id="Man United" class="ui-state-default ui-sortable-handle" style="">Manchester United</li>
+      <li id="Tottenham" class="ui-state-default ui-sortable-handle" style="">Tottenham Hotspur</li>
+      <li id="Liverpool" class="ui-state-default ui-sortable-handle" style="">Liverpool</li>
+      <li id="Aston Villa" class="ui-state-default ui-sortable-handle">Aston Villa</li>
+      <li id="Bournemouth" class="ui-state-default ui-sortable-handle">Bournemouth</li>
+      <li id="Brighton Hove" class="ui-state-default ui-sortable-handle" style="">Brighton and Hove Albion</li>
+      <li id="Chelsea" class="ui-state-default ui-sortable-handle" style="">Chelsea</li>
+      <li id="Leeds United" class="ui-state-default ui-sortable-handle" style="">Leeds United</li>
+      <li id="Everton" class="ui-state-default ui-sortable-handle">Everton</li>
+      <li id="Brentford" class="ui-state-default ui-sortable-handle" style="">Brentford</li>
+      <li id="Fulham" class="ui-state-default ui-sortable-handle">Fulham</li>
+      <li id="Sunderland" class="ui-state-default ui-sortable-handle" style="">Sunderland</li>
+      <li id="Newcastle" class="ui-state-default ui-sortable-handle" style="">Newcastle United</li>
+      <li id="Nottingham" class="ui-state-default ui-sortable-handle" style="">Nottingham Forest</li>
+      <li id="Crystal Palace" class="ui-state-default ui-sortable-handle" style="">Crystal Palace </li>
+      <li id="Coventry" class="ui-state-default ui-sortable-handle" style="">Coventry City</li>
+      <li id="Ipswich" class="ui-state-default ui-sortable-handle" style=""> Ipswich Town</li>
+      <li id="Hull" class="ui-state-default ui-sortable-handle" style="">Hull City </li>
+    </ol>
+    <hr>
+    <h3><a name='-200829271'>David Evans</a></h3>
+    <h4>Finishing Positions</h4>:
+    <ol class="ui-sortable" id="David Evans">
+      <li id="Arsenal" class="ui-state-default ui-sortable-handle">Arsenal</li>
+      <li id="Chelsea" class="ui-state-default ui-sortable-handle" style="">Chelsea</li>
+      <li id="Man City" class="ui-state-default ui-sortable-handle" style="">Manchester City</li>
+      <li id="Liverpool" class="ui-state-default ui-sortable-handle" style="">Liverpool</li>
+      <li id="Man United" class="ui-state-default ui-sortable-handle" style="">Manchester United</li>
+      <li id="Tottenham" class="ui-state-default ui-sortable-handle" style="">Tottenham Hotspur</li>
+      <li id="Aston Villa" class="ui-state-default ui-sortable-handle">Aston Villa</li>
+      <li id="Everton" class="ui-state-default ui-sortable-handle" style="">Everton</li>
+      <li id="Brighton Hove" class="ui-state-default ui-sortable-handle" style="">Brighton and Hove Albion</li>
+      <li id="Sunderland" class="ui-state-default ui-sortable-handle" style="">Sunderland</li>
+      <li id="Crystal Palace" class="ui-state-default ui-sortable-handle" style="">Crystal Palace </li>
+      <li id="Nottingham" class="ui-state-default ui-sortable-handle" style="">Nottingham Forest</li>
+      <li id="Leeds United" class="ui-state-default ui-sortable-handle" style="">Leeds United</li>
+      <li id="Brentford" class="ui-state-default ui-sortable-handle" style="">Brentford</li>
+      <li id="Newcastle" class="ui-state-default ui-sortable-handle" style="">Newcastle United</li>
+      <li id="Coventry" class="ui-state-default ui-sortable-handle">Coventry City</li>
+      <li id="Bournemouth" class="ui-state-default ui-sortable-handle" style="">Bournemouth</li>
+      <li id="Fulham" class="ui-state-default ui-sortable-handle">Fulham</li>
+      <li id="Ipswich" class="ui-state-default ui-sortable-handle" style=""> Ipswich Town</li>
+      <li id="Hull" class="ui-state-default ui-sortable-handle" style="">Hull City </li>
+    </ol>
+    <hr>
+    <h3><a name='2087271264'>Neil French</a></h3>
+    <h4>Finishing Positions</h4>:
+    <ol class="ui-sortable" id="Neil French">
+      <li id="Arsenal" class="ui-state-default ui-sortable-handle">Arsenal</li>
+      <li id="Man City" class="ui-state-default ui-sortable-handle" style="">Manchester City</li>
+      <li id="Man United" class="ui-state-default ui-sortable-handle" style="">Manchester United</li>
+      <li id="Chelsea" class="ui-state-default ui-sortable-handle" style="">Chelsea</li>
+      <li id="Liverpool" class="ui-state-default ui-sortable-handle" style="">Liverpool</li>
+      <li id="Newcastle" class="ui-state-default ui-sortable-handle" style="">Newcastle United</li>
+      <li id="Aston Villa" class="ui-state-default ui-sortable-handle">Aston Villa</li>
+      <li id="Bournemouth" class="ui-state-default ui-sortable-handle" style="">Bournemouth</li>
+      <li id="Tottenham" class="ui-state-default ui-sortable-handle" style="">Tottenham Hotspur</li>
+      <li id="Brentford" class="ui-state-default ui-sortable-handle">Brentford</li>
+      <li id="Brighton Hove" class="ui-state-default ui-sortable-handle">Brighton and Hove Albion</li>
+      <li id="Everton" class="ui-state-default ui-sortable-handle" style="">Everton</li>
+      <li id="Leeds United" class="ui-state-default ui-sortable-handle">Leeds United</li>
+      <li id="Nottingham" class="ui-state-default ui-sortable-handle">Nottingham Forest</li>
+      <li id="Sunderland" class="ui-state-default ui-sortable-handle">Sunderland</li>
+      <li id="Fulham" class="ui-state-default ui-sortable-handle" style="">Fulham</li>
+      <li id="Ipswich" class="ui-state-default ui-sortable-handle" style=""> Ipswich Town</li>
+      <li id="Crystal Palace" class="ui-state-default ui-sortable-handle" style="">Crystal Palace </li>
+      <li id="Hull" class="ui-state-default ui-sortable-handle" style="">Hull City </li>
+      <li id="Coventry" class="ui-state-default ui-sortable-handle" style="">Coventry City</li>
+    </ol>
+    <hr>
+    <h3><a name='-1862501265'>Jaymes-Jaymes O-Cox-a</a></h3>
+    <h4>Finishing Positions</h4>:
+    <ol class="ui-sortable" id="Jaymes-Jaymes O-Cox-a">
+      <li id="Arsenal" class="ui-state-default ui-sortable-handle">Arsenal</li>
+      <li id="Man City" class="ui-state-default ui-sortable-handle" style="">Manchester City</li>
+      <li id="Chelsea" class="ui-state-default ui-sortable-handle" style="">Chelsea</li>
+      <li id="Liverpool" class="ui-state-default ui-sortable-handle" style="">Liverpool</li>
+      <li id="Newcastle" class="ui-state-default ui-sortable-handle" style="">Newcastle United</li>
+      <li id="Brighton Hove" class="ui-state-default ui-sortable-handle" style="">Brighton and Hove Albion</li>
+      <li id="Man United" class="ui-state-default ui-sortable-handle" style="">Manchester United</li>
+      <li id="Brentford" class="ui-state-default ui-sortable-handle" style="">Brentford</li>
+      <li id="Aston Villa" class="ui-state-default ui-sortable-handle" style="">Aston Villa</li>
+      <li id="Bournemouth" class="ui-state-default ui-sortable-handle" style="">Bournemouth</li>
+      <li id="Everton" class="ui-state-default ui-sortable-handle">Everton</li>
+      <li id="Fulham" class="ui-state-default ui-sortable-handle" style="">Fulham</li>
+      <li id="Tottenham" class="ui-state-default ui-sortable-handle" style="">Tottenham Hotspur</li>
+      <li id="Nottingham" class="ui-state-default ui-sortable-handle" style="">Nottingham Forest</li>
+      <li id="Crystal Palace" class="ui-state-default ui-sortable-handle" style="">Crystal Palace </li>
+      <li id="Leeds United" class="ui-state-default ui-sortable-handle" style="">Leeds United</li>
+      <li id="Hull" class="ui-state-default ui-sortable-handle" style="">Hull City </li>
+      <li id="Ipswich" class="ui-state-default ui-sortable-handle" style=""> Ipswich Town</li>
+      <li id="Coventry" class="ui-state-default ui-sortable-handle" style="">Coventry City</li>
+      <li id="Sunderland" class="ui-state-default ui-sortable-handle">Sunderland</li>
+    </ol>
+    <hr>
+    <h3><a name='1038828338'>Phil McNulty BBC</a></h3>
+    <h4>Finishing Positions</h4>:
+    <ol class="ui-sortable" id="Phil McNulty BBC">
+      <li id="Arsenal" class="ui-state-default ui-sortable-handle">Arsenal</li>
+      <li id="Man City" class="ui-state-default ui-sortable-handle" style="">Manchester City</li>
+      <li id="Liverpool" class="ui-state-default ui-sortable-handle" style="">Liverpool</li>
+      <li id="Chelsea" class="ui-state-default ui-sortable-handle" style="">Chelsea</li>
+      <li id="Man United" class="ui-state-default ui-sortable-handle" style="">Manchester United</li>
+      <li id="Aston Villa" class="ui-state-default ui-sortable-handle">Aston Villa</li>
+      <li id="Tottenham" class="ui-state-default ui-sortable-handle" style="">Tottenham Hotspur</li>
+      <li id="Nottingham" class="ui-state-default ui-sortable-handle" style="">Nottingham Forest</li>
+      <li id="Brighton Hove" class="ui-state-default ui-sortable-handle" style="">Brighton and Hove Albion</li>
+      <li id="Brentford" class="ui-state-default ui-sortable-handle" style="">Brentford</li>
+      <li id="Crystal Palace" class="ui-state-default ui-sortable-handle" style="">Crystal Palace </li>
+      <li id="Newcastle" class="ui-state-default ui-sortable-handle" style="">Newcastle United</li>
+      <li id="Everton" class="ui-state-default ui-sortable-handle" style="">Everton</li>
+      <li id="Bournemouth" class="ui-state-default ui-sortable-handle">Bournemouth</li>
+      <li id="Leeds United" class="ui-state-default ui-sortable-handle" style="">Leeds United</li>
+      <li id="Fulham" class="ui-state-default ui-sortable-handle" style="">Fulham</li>
+      <li id="Sunderland" class="ui-state-default ui-sortable-handle" style="">Sunderland</li>
+      <li id="Coventry" class="ui-state-default ui-sortable-handle">Coventry City</li>
+      <li id="Ipswich" class="ui-state-default ui-sortable-handle" style=""> Ipswich Town</li>
+      <li id="Hull" class="ui-state-default ui-sortable-handle" style="">Hull City </li>
+    </ol>
+    <hr>
+    <h3><a name='703583310'>When Saturday Comes</a></h3>
+    <h4>Finishing Positions</h4>:
+    <ol class="ui-sortable" id="When Saturday Comes">
+      <li id="Arsenal" class="ui-state-default ui-sortable-handle">Arsenal</li>
+      <li id="Man City" class="ui-state-default ui-sortable-handle" style="">Manchester City</li>
+      <li id="Man United" class="ui-state-default ui-sortable-handle" style="">Manchester United</li>
+      <li id="Liverpool" class="ui-state-default ui-sortable-handle" style="">Liverpool</li>
+      <li id="Aston Villa" class="ui-state-default ui-sortable-handle" style="">Aston Villa</li>
+      <li id="Chelsea" class="ui-state-default ui-sortable-handle" style="">Chelsea</li>
+      <li id="Brighton Hove" class="ui-state-default ui-sortable-handle" style="">Brighton and Hove Albion</li>
+      <li id="Newcastle" class="ui-state-default ui-sortable-handle" style="">Newcastle United</li>
+      <li id="Tottenham" class="ui-state-default ui-sortable-handle" style="">Tottenham Hotspur</li>
+      <li id="Brentford" class="ui-state-default ui-sortable-handle" style="">Brentford</li>
+      <li id="Everton" class="ui-state-default ui-sortable-handle" style="">Everton</li>
+      <li id="Sunderland" class="ui-state-default ui-sortable-handle" style="">Sunderland</li>
+      <li id="Bournemouth" class="ui-state-default ui-sortable-handle">Bournemouth</li>
+      <li id="Crystal Palace" class="ui-state-default ui-sortable-handle" style="">Crystal Palace </li>
+      <li id="Leeds United" class="ui-state-default ui-sortable-handle" style="">Leeds United</li>
+      <li id="Fulham" class="ui-state-default ui-sortable-handle">Fulham</li>
+      <li id="Nottingham" class="ui-state-default ui-sortable-handle" style="">Nottingham Forest</li>
+      <li id="Coventry" class="ui-state-default ui-sortable-handle" style="">Coventry City</li>
+      <li id="Ipswich" class="ui-state-default ui-sortable-handle"> Ipswich Town</li>
+      <li id="Hull" class="ui-state-default ui-sortable-handle" style="">Hull City </li>
+    </ol>
+    <hr>
+  </body>
 
-<!-- pasted in ^^^^^ uncommet above for next year-->
-
-<!-- PASTE IN FINAL STANDINGS AT END & COMMENT OUT div ABOVE -->
-
-
-<!-- end of pasted in -->
-
-<h2> Final Standings</h2>
-
-<div id="current-scores"></div>
-<!-- pasted in ^^^^^ uncommet above for next year-->
-<!-- PASTE IN FINAL pREDICTIONS SCORES AT END & COMMENT OUT div ABOVE -->
-
-
-<!-- end of pasted in -->
-
-
-
-
-
-
-<h3>Table From Last Year</h3>
-
-<ol id="table"><li>Arsenal</li>
-<li>Man City</li>
-<li>Man United</li>
-<li>Aston Villa</li>
-<li>Liverpool</li>
-<li>Bournemouth</li>
-<li>Sunderland</li>
-<li>Brighton Hove</li>
-<li>Brentford</li>
-<li>Chelsea</li>
-<li>Fulham</li>
-<li>Newcastle</li>
-<li>Everton</li>
-<li>Leeds United</li>
-<li>Crystal Palace</li>
-<li>Nottingham</li>
-<li>Tottenham</li>
-<li>West Ham</li>
-<li>Burnley</li>
-<li>Wolverhampton</li></ol>
-
- <h2>Entries</h2>
-
-<!-- entries here -->
-
-                
-</body>
-</html>
+  </html>
